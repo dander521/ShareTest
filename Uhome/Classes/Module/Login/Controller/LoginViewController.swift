@@ -28,19 +28,6 @@ class LoginViewController: BaseViewController {
         self.customizeTF()
     }
 
-    func showAlert() {
-        let alertView = UIAlertController(title: "Login", message: "Let us go!", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let alertAction = UIAlertAction(title: "Sure", style: UIAlertActionStyle.default) { _ in
-            alertView.dismiss(animated: true, completion: nil)
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        alertView.addAction(alertAction)
-        
-        self.present(alertView, animated: true, completion: nil)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,6 +42,11 @@ class LoginViewController: BaseViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    func touchLoginBtn() {
+        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
+        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
     }
     
     func setUpUI() {
@@ -94,6 +86,7 @@ class LoginViewController: BaseViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 20)
             $0.setTitle("Login", for: UIControlState.normal)
             $0.setTitleColor(UIColor.white, for: UIControlState.normal)
+            $0.addTarget(self, action: #selector(LoginViewController.touchLoginBtn), for: UIControlEvents.touchUpInside)
         }
         
         usernameLabel = UILabel().then {

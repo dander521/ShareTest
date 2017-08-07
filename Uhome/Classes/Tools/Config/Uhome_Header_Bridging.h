@@ -16,6 +16,7 @@
 #import "SDWebImageManager.h"
 
 #import "TXModelAchivar.h"
+#import "TXUserModel.h"
 
 //MARK: - BaiduMap
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>

@@ -53,8 +53,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     //MARK: - Custom Method
     func configViewController() {
-        navigationItem.title = "百度地图"
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white 
+        clearNavigationBarColor()
     }
     
     // MARK: - BMKMapViewDelegate
@@ -94,5 +94,16 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
      */
     func didStopLocatingUser() {
         print("didStopLocatingUser")
+    }
+    
+    func clearNavigationBarColor() {
+        var textAttrs: [String : AnyObject] = Dictionary()
+        textAttrs[NSForegroundColorAttributeName] = UIColor.white
+        textAttrs[NSFontAttributeName] = UIFont.systemFont(ofSize: 16)
+        self.navigationController?.navigationBar.titleTextAttributes = textAttrs
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        navigationController?.navigationBar.isTranslucent = true
     }
 }

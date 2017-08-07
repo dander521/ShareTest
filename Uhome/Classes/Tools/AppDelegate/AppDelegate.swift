@@ -63,16 +63,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BMKGeneralDelegate {
     //MARK: - Config RootViewController
     func configRootViewController() {
         let mainNavigation = MainNavigationController.init(rootViewController: BMPViewController())
+        let loginViewController = MainNavigationController.init(rootViewController: LoginViewController())
         let leadingVC = TailorxLeadingViewController()
+        
+        let resultVC = TXUserModel().userLoginStatus() ? mainNavigation : loginViewController;
         
         // 获取版本号
         let currenVersion: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         let lastVersion = UserDefaults.standard.object(forKey: "CFBundleShortVersionString")
         if lastVersion != nil && currenVersion == lastVersion as! String {
-            self.window?.rootViewController = mainNavigation
+            self.window?.rootViewController = resultVC
         } else {
             self.window?.rootViewController = leadingVC
-            leadingVC.rootViewController = mainNavigation
+            leadingVC.rootViewController = resultVC
             let userDefault = UserDefaults.standard
             userDefault.set(currenVersion, forKey: "CFBundleShortVersionString")
             userDefault.synchronize()

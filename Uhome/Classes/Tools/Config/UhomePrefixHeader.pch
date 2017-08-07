@@ -14,5 +14,6 @@
 #import "MJExtension.h"
 #import "SDWebImageManager.h"
 #import "TXModelAchivar.h"
+#import "TXUserModel.h"
 
 #endif /* UhomePrefixHeader_pch */
