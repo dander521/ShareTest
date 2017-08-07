@@ -51,6 +51,8 @@
 		F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496EB1F38912A00867731 /* TXCountDownTime.m */; };
 		F18496F01F3896A200867731 /* LGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496EF1F3896A200867731 /* LGHTTPClient.m */; };
 		F18496F31F3896AF00867731 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496F21F3896AF00867731 /* ViewController.m */; };
+		F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18496F41F38986F00867731 /* CustomBottomView.swift */; };
+		F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18496F61F38987A00867731 /* CustomBottomView.xib */; };
 		F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FCEB01EE1508800985482 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		F18496EF1F3896A200867731 /* LGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGHTTPClient.m; sourceTree = "<group>"; };
 		F18496F11F3896AF00867731 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F18496F21F3896AF00867731 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F18496F41F38986F00867731 /* CustomBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomView.swift; sourceTree = "<group>"; };
+		F18496F61F38987A00867731 /* CustomBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBottomView.xib; sourceTree = "<group>"; };
 		F18FCEB01EE1508800985482 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -446,6 +450,8 @@
 		F17DCA051ED806B7002B0F7F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F18496F41F38986F00867731 /* CustomBottomView.swift */,
+				F18496F61F38987A00867731 /* CustomBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */,
 				F17DC9EE1ED802EA002B0F7F /* qr_album.png in Resources */,
 				F17DC9EF1ED802EA002B0F7F /* qr_back.png in Resources */,
 				F17DC9F21ED802EA002B0F7F /* qr_line.png in Resources */,
@@ -668,6 +675,7 @@
 				F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */,
 				F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */,
 				F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */,
+				F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */,
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
