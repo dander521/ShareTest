@@ -47,6 +47,10 @@
 		F17DCA1A1ED83073002B0F7F /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F17DCA191ED83073002B0F7F /* mapapi.bundle */; };
 		F18496E21F380E4500867731 /* TXModelAchivar.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496DE1F380E4500867731 /* TXModelAchivar.m */; };
 		F18496E31F380E4500867731 /* TXUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496E01F380E4500867731 /* TXUserModel.m */; };
+		F18496E91F38738E00867731 /* WSAuthCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496E81F38738E00867731 /* WSAuthCode.m */; };
+		F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496EB1F38912A00867731 /* TXCountDownTime.m */; };
+		F18496F01F3896A200867731 /* LGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496EF1F3896A200867731 /* LGHTTPClient.m */; };
+		F18496F31F3896AF00867731 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18496F21F3896AF00867731 /* ViewController.m */; };
 		F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FCEB01EE1508800985482 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,14 @@
 		F18496DE1F380E4500867731 /* TXModelAchivar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXModelAchivar.m; sourceTree = "<group>"; };
 		F18496DF1F380E4500867731 /* TXUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXUserModel.h; sourceTree = "<group>"; };
 		F18496E01F380E4500867731 /* TXUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXUserModel.m; sourceTree = "<group>"; };
+		F18496E71F38738E00867731 /* WSAuthCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAuthCode.h; sourceTree = "<group>"; };
+		F18496E81F38738E00867731 /* WSAuthCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAuthCode.m; sourceTree = "<group>"; };
+		F18496EA1F38912A00867731 /* TXCountDownTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXCountDownTime.h; sourceTree = "<group>"; };
+		F18496EB1F38912A00867731 /* TXCountDownTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXCountDownTime.m; sourceTree = "<group>"; };
+		F18496EE1F3896A200867731 /* LGHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGHTTPClient.h; sourceTree = "<group>"; };
+		F18496EF1F3896A200867731 /* LGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGHTTPClient.m; sourceTree = "<group>"; };
+		F18496F11F3896AF00867731 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F18496F21F3896AF00867731 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F18FCEB01EE1508800985482 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +263,7 @@
 		270FDC321ED5AC580047D162 /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
+				F18496ED1F3896A200867731 /* HTTPClient */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -471,6 +484,28 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		F18496E41F38719300867731 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F18496E71F38738E00867731 /* WSAuthCode.h */,
+				F18496E81F38738E00867731 /* WSAuthCode.m */,
+				F18496EA1F38912A00867731 /* TXCountDownTime.h */,
+				F18496EB1F38912A00867731 /* TXCountDownTime.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F18496ED1F3896A200867731 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				F18496F11F3896AF00867731 /* ViewController.h */,
+				F18496F21F3896AF00867731 /* ViewController.m */,
+				F18496EE1F3896A200867731 /* LGHTTPClient.h */,
+				F18496EF1F3896A200867731 /* LGHTTPClient.m */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
 		F18FCE9D1EE10D3200985482 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				F18FCEB01EE1508800985482 /* LoginViewController.swift */,
+				F18496E41F38719300867731 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -625,13 +661,17 @@
 				270FDC461ED5C15B0047D162 /* UIColorExtension.swift in Sources */,
 				F18496E31F380E4500867731 /* TXUserModel.m in Sources */,
 				F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */,
+				F18496F01F3896A200867731 /* LGHTTPClient.m in Sources */,
 				F17DCA011ED8065B002B0F7F /* BaseViewController.swift in Sources */,
 				F18496E21F380E4500867731 /* TXModelAchivar.m in Sources */,
+				F18496F31F3896AF00867731 /* ViewController.m in Sources */,
 				F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */,
 				F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */,
+				F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */,
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
+				F18496E91F38738E00867731 /* WSAuthCode.m in Sources */,
 				F17DC9E61ED80138002B0F7F /* YTFScanToolController.m in Sources */,
 				F11346BA1ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.m in Sources */,
 				F17DCA161ED82373002B0F7F /* BMPViewController.swift in Sources */,

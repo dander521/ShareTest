@@ -53,7 +53,7 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     //MARK: - Custom Method
     func configViewController() {
-        view.backgroundColor = UIColor.white 
+        view.backgroundColor = UIColor.white
         clearNavigationBarColor()
     }
     

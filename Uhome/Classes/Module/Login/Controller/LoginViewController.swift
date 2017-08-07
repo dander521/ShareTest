@@ -12,15 +12,22 @@ import KRProgressHUD
 import Then
 
 class LoginViewController: BaseViewController {
-
-    var usernameTF: UITextField!
-    var passwordTF: UITextField!
-    var loginButton: UIButton!
+    
     var backgroundView: UIImageView!
-    var signInActivityIndicator: UIActivityIndicatorView!
-    var usernameLabel: UILabel!
-    var passwordLabel: UILabel!
-
+    var headImageView: UIImageView!
+    var headLabel: UILabel!
+    var phoneTF: UITextField!
+    var codeViewTF: UITextField!
+    var codeView: WSAuthCode!
+    var refreshButton: UIButton!
+    var pincodeTF: UITextField!
+    var pincodeButton: UIButton!
+    var loginButton: UIButton!
+    
+    var phoneLabel: UILabel!
+    var codeViewLabel: UILabel!
+    var pincodeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearNavigationBarColor()
@@ -32,7 +39,9 @@ class LoginViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+    /// 导航栏透明
     func clearNavigationBarColor() {
         var textAttrs: [String : AnyObject] = Dictionary()
         textAttrs[NSForegroundColorAttributeName] = UIColor.white
@@ -44,125 +53,223 @@ class LoginViewController: BaseViewController {
         navigationController?.navigationBar.isTranslucent = true
     }
     
+    /// 登录
     func touchLoginBtn() {
         UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
-        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
+        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "0")
     }
     
+    /// 获取手机验证码
+    func touchPincodeBtn() {
+        TXCountDownTime.shared().start(withTime: 60, title: "获取验证码", countDownTitle: "重新获取", mainColor: UIColor.yellow, count: UIColor.lightGray, atBtn: self.pincodeButton)
+    }
+    
+    /// 刷新图形验证码
+    func touchRefreshPincodeBtn() {
+        codeView.reloadView()
+    }
+    
+    /// 配置UI
     func setUpUI() {
         
         view.backgroundColor = UIColor.white
-        self.navigationItem.title = "登 录"
-        
+
         backgroundView = UIImageView().then {
+            $0.backgroundColor = UIColor.clear
+        }
+        
+        codeView = WSAuthCode.init(frame: CGRect(x:0,y:0,width:100,height:44), allWordArraytype: OnlyNumbers)
+        
+        headImageView = UIImageView().then {
+            $0.backgroundColor = UIColor.clear
             $0.image = UIImage.init(named: "background")
+            $0.layer.cornerRadius = 50
+            $0.layer.masksToBounds = true
         }
         
-        usernameTF = UITextField().then {
-            $0.text = "dander521"
-            $0.layer.borderColor = UIColor.red.cgColor
-            $0.backgroundColor = UIColor.white
-            $0.layer.borderWidth = 1
-            $0.font = UIFont.systemFont(ofSize: 14)
-            $0.placeholder = "请输入账号"
-            $0.borderStyle = UITextBorderStyle.none
+        headLabel = UILabel().then {
+            $0.backgroundColor = UIColor.clear
+            $0.text = "TKC光轴链"
             $0.textAlignment = NSTextAlignment.center
+            $0.textColor = UIColor.black
+            $0.font = UIFont.systemFont(ofSize: 14)
         }
         
-        passwordTF = UITextField().then {
-            $0.text = "ad123000"
-            $0.isSecureTextEntry = true
-            $0.placeholder = "请输入密码"
+        phoneLabel = UILabel().then {
+            $0.backgroundColor = UIColor.black
+        }
+        
+        codeViewLabel = UILabel().then {
+            $0.backgroundColor = UIColor.black
+        }
+        
+        pincodeLabel = UILabel().then {
+            $0.backgroundColor = UIColor.black
+        }
+        
+        phoneTF = UITextField().then {
+            $0.backgroundColor = UIColor.white
+            $0.font = UIFont.systemFont(ofSize: 14)
+            $0.borderStyle = UITextBorderStyle.none
+            $0.textAlignment = NSTextAlignment.left
+        }
+        
+        pincodeTF = UITextField().then {
+            $0.isSecureTextEntry = false
             $0.borderStyle = UITextBorderStyle.none
             $0.backgroundColor = UIColor.white
-            $0.layer.borderColor = UIColor.red.cgColor
-            $0.layer.borderWidth = 1
             $0.font = UIFont.systemFont(ofSize: 14)
-            $0.textAlignment = NSTextAlignment.center
+            $0.textAlignment = NSTextAlignment.left
+        }
+        
+        codeViewTF = UITextField().then {
+            $0.isSecureTextEntry = false
+            $0.borderStyle = UITextBorderStyle.none
+            $0.backgroundColor = UIColor.white
+            $0.font = UIFont.systemFont(ofSize: 14)
+            $0.textAlignment = NSTextAlignment.left
+        }
+        
+        refreshButton = UIButton().then {
+            $0.layer.cornerRadius = 5
+            $0.layer.masksToBounds = true
+            $0.backgroundColor = UIColor.yellow
+            $0.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+            $0.setTitle("刷新", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.addTarget(self, action: #selector(LoginViewController.touchRefreshPincodeBtn), for: UIControlEvents.touchUpInside)
+        }
+        
+        pincodeButton = UIButton().then {
+            $0.layer.cornerRadius = 5
+            $0.layer.masksToBounds = true
+            $0.backgroundColor = UIColor.yellow
+            $0.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+            $0.setTitle("获取验证码", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
+            $0.addTarget(self, action: #selector(LoginViewController.touchPincodeBtn), for: UIControlEvents.touchUpInside)
         }
         
         loginButton = UIButton().then {
-            $0.backgroundColor = UIColor.green
+            $0.layer.cornerRadius = 5
+            $0.layer.masksToBounds = true
+            $0.backgroundColor = UIColor.yellow
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-            $0.setTitle("Login", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.white, for: UIControlState.normal)
+            $0.setTitle("登 录", for: UIControlState.normal)
+            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
             $0.addTarget(self, action: #selector(LoginViewController.touchLoginBtn), for: UIControlEvents.touchUpInside)
         }
-        
-        usernameLabel = UILabel().then {
-            $0.textAlignment = NSTextAlignment.left
-            $0.textColor = UIColor.red
-            $0.text = "请输入6-10位用户名"
-        }
-        
-        passwordLabel = UILabel().then {
-            $0.textAlignment = NSTextAlignment.left
-            $0.textColor = UIColor.red
-            $0.text = "请输入6-10位密码"
-        }
-        
-        signInActivityIndicator = UIActivityIndicatorView()
-        signInActivityIndicator.hidesWhenStopped = true
 
-        loginButton.addSubview(signInActivityIndicator)
         view.addSubview(backgroundView)
-        view.addSubview(usernameLabel)
-        view.addSubview(passwordLabel)
-        view.addSubview(usernameTF)
-        view.addSubview(passwordTF)
+        view.addSubview(headImageView)
+        view.addSubview(headLabel)
+        view.addSubview(phoneTF)
+        view.addSubview(pincodeTF)
+        view.addSubview(codeViewTF)
+        view.addSubview(refreshButton)
+        view.addSubview(pincodeButton)
         view.addSubview(loginButton)
-        
-        signInActivityIndicator.mas_makeConstraints { make in
-            make?.left.equalTo()(self.loginButton)?.setOffset(40)
-            make?.top.equalTo()(self.loginButton)?.setOffset(15)
-            make?.height.equalTo()(20)
-            make?.width.equalTo()(20)
-        }
+        view.addSubview(codeView)
+        view.addSubview(phoneLabel)
+        view.addSubview(codeViewLabel)
+        view.addSubview(pincodeLabel)
         
         backgroundView.mas_makeConstraints {make in
             make?.edges.mas_equalTo()(self.view)
         }
         
-        usernameTF.mas_makeConstraints { make in
+        headImageView.mas_makeConstraints { make in
             make?.top.equalTo()(self.view)?.setOffset(100)
+            make?.centerX.equalTo()(self.view)
+            make?.height.equalTo()(100)
+            make?.width.equalTo()(100)
+        }
+        
+        headLabel.mas_makeConstraints { make in
+            make?.top.equalTo()(self.headImageView.mas_bottom)?.setOffset(15)
+            make?.centerX.equalTo()(self.view)
+            make?.height.equalTo()(20)
+            make?.width.equalTo()(150)
+        }
+        
+        phoneTF.mas_makeConstraints { make in
+            make?.top.equalTo()(self.headLabel.mas_bottom)?.setOffset(40)
             make?.left.equalTo()(self.view)?.setOffset(20)
             make?.right.equalTo()(self.view)?.setOffset(-20)
             make?.height.equalTo()(44)
         }
         
-        passwordTF.mas_makeConstraints { make in
-            make?.top.equalTo()(self.usernameTF.mas_bottom)?.setOffset(60)
+        codeViewTF.mas_makeConstraints { make in
+            make?.top.equalTo()(self.phoneTF.mas_bottom)?.setOffset(20)
             make?.left.equalTo()(self.view)?.setOffset(20)
+            make?.right.equalTo()(self.codeView.mas_left)?.setOffset(-10)
+            make?.height.equalTo()(44)
+        }
+        
+        codeView.mas_makeConstraints { make in
+            make?.top.equalTo()(self.phoneTF.mas_bottom)?.setOffset(20)
+            make?.left.equalTo()(self.codeViewTF.mas_right)?.setOffset(10)
+            make?.height.equalTo()(44)
+            make?.right.equalTo()(self.refreshButton.mas_left)?.setOffset(-10)
+            make?.width.equalTo()(100)
+        }
+        
+        refreshButton.mas_makeConstraints { make in
+            make?.top.equalTo()(self.phoneTF.mas_bottom)?.setOffset(20)
+            make?.left.equalTo()(self.codeView.mas_right)?.setOffset(10)
             make?.right.equalTo()(self.view)?.setOffset(-20)
             make?.height.equalTo()(44)
+            make?.width.equalTo()(44)
+        }
+        
+        pincodeTF.mas_makeConstraints { make in
+            make?.top.equalTo()(self.refreshButton.mas_bottom)?.setOffset(20)
+            make?.left.equalTo()(self.view)?.setOffset(20)
+            make?.height.equalTo()(44)
+        }
+        
+        pincodeButton.mas_makeConstraints { make in
+            make?.top.equalTo()(self.refreshButton.mas_bottom)?.setOffset(20)
+            make?.left.equalTo()(self.pincodeTF.mas_right)?.setOffset(10)
+            make?.right.equalTo()(self.view)?.setOffset(-20)
+            make?.height.equalTo()(44)
+            make?.width.equalTo()(155)
         }
         
         loginButton.mas_makeConstraints { make in
-            make?.top.equalTo()(self.passwordTF.mas_bottom)?.setOffset(60)
+            make?.top.equalTo()(self.pincodeTF.mas_bottom)?.setOffset(60)
             make?.left.equalTo()(self.view)?.setOffset(20)
             make?.right.equalTo()(self.view)?.setOffset(-20)
             make?.height.equalTo()(50)
         }
         
-        usernameLabel.mas_makeConstraints { make in
-            make?.top.equalTo()(self.usernameTF.mas_bottom)?.setOffset(20)
-            make?.left.equalTo()(self.view)?.setOffset(20)
-            make?.right.equalTo()(self.view)?.setOffset(-20)
-            make?.height.equalTo()(20)
+        phoneLabel.mas_makeConstraints { make in
+            make?.top.equalTo()(self.phoneTF.mas_bottom)
+            make?.left.equalTo()(self.phoneTF.mas_left)
+            make?.right.equalTo()(self.phoneTF.mas_right)
+            make?.height.equalTo()(0.5)
         }
         
-        passwordLabel.mas_makeConstraints { make in
-            make?.top.equalTo()(self.passwordTF.mas_bottom)?.setOffset(20)
-            make?.left.equalTo()(self.view)?.setOffset(20)
-            make?.right.equalTo()(self.view)?.setOffset(-20)
-            make?.height.equalTo()(20)
+        codeViewLabel.mas_makeConstraints { make in
+            make?.top.equalTo()(self.codeViewTF.mas_bottom)
+            make?.left.equalTo()(self.codeViewTF.mas_left)
+            make?.right.equalTo()(self.codeViewTF.mas_right)
+            make?.height.equalTo()(0.5)
+        }
+        
+        pincodeLabel.mas_makeConstraints { make in
+            make?.top.equalTo()(self.pincodeTF.mas_bottom)
+            make?.left.equalTo()(self.pincodeTF.mas_left)
+            make?.right.equalTo()(self.pincodeTF.mas_right)
+            make?.height.equalTo()(0.5)
         }
     }
 }
 
 extension LoginViewController {
     func customizeTF() {
-        usernameTF.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
-        passwordTF.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        phoneTF.attributedPlaceholder = NSAttributedString(string: "输入手机号", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        codeViewTF.attributedPlaceholder = NSAttributedString(string: "图形验证码", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        pincodeTF.attributedPlaceholder = NSAttributedString(string: "输入验证码", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
     }
 }
