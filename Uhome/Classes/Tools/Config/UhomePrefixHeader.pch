@@ -1,0 +1,18 @@
+//
+//  UhomePrefixHeader.pch
+//  Uhome
+//
+//  Created by 程荣刚 on 2017/5/26.
+//  Copyright © 2017年 menhao. All rights reserved.
+//
+
+#ifndef UhomePrefixHeader_pch
+#define UhomePrefixHeader_pch
+
+#import "MBProgressHUD.h"
+#import "Masonry.h"
+#import "MJExtension.h"
+#import "SDWebImageManager.h"
+#import "TXModelAchivar.h"
+
+#endif /* UhomePrefixHeader_pch */
