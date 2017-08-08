@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServiceDelegate {
+class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServiceDelegate, CustomBottomViewDelegate {
     
     var locationService: BMKLocationService!
     var mapView: BMKMapView!
@@ -20,6 +20,11 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         
         mapView = BMKMapView.init(frame: view.frame)
         view.addSubview(mapView)
+        
+        if let customBottomView = CustomBottomView.newInstance() {
+            customBottomView.delegate = self
+            view.addSubview(customBottomView)
+        }
         
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
@@ -105,5 +110,27 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         navigationController?.navigationBar.shadowImage = UIImage()
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    // MARK: - CustomBottomViewDelegate
+    
+    func responseToQuestionBtn() {
+        print("responseToQuestionBtn")
+    }
+    
+    func responseToLocationBtn() {
+        
+    }
+    
+    func responseToQrcodeBtn() {
+        
+    }
+    
+    func responseToPersonalBtn() {
+        
+    }
+    
+    func responseToActiveBtn() {
+        
     }
 }
