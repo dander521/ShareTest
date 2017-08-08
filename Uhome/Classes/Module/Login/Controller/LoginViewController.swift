@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import KRProgressHUD
 import Then
+import Alamofire
+
 
 class LoginViewController: BaseViewController {
     
@@ -55,8 +57,66 @@ class LoginViewController: BaseViewController {
     
     /// 登录
     func touchLoginBtn() {
-        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
-        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "0")
+//        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
+//        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "0")
+        requestLogin()
+    }
+    
+    func requestLogin() {
+        
+        Alamofire.request("http://www.damudichan.com/api/app/get.asmx/get_prices", method: .post, parameters: ["house_id" : "1"]).responseString { (string) in
+
+            
+            print(string.description)
+            
+            let startRange = string.description.range(of:"{") //正向检索
+            let endRange = string.description.range(of:"}", options: .backwards)//反向检索
+            
+            let searchRange = (startRange?.lowerBound)! ..< (endRange?.upperBound)!
+
+            let resultString = string.description.substring(with: searchRange)
+            
+            print(resultString)
+            
+            let dic = self.getDictionaryFromJSONString(jsonString: resultString)
+            
+            print(dic)
+            
+            
+        }
+    }
+    
+    /// JSONString转换为字典
+    ///
+    /// - Parameter jsonString: <#jsonString description#>
+    /// - Returns: <#return value description#>
+    func getDictionaryFromJSONString(jsonString:String) ->NSDictionary{
+        
+        let jsonData:Data = jsonString.data(using: .utf8)!
+        
+        let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        if dict != nil {
+            return dict as! NSDictionary
+        }
+        return NSDictionary()
+    }
+    
+    /**
+     字典转换为JSONString
+     
+     - parameter dictionary: 字典参数
+     
+     - returns: JSONString
+     */
+    func getJSONStringFromDictionary(dictionary:NSDictionary) -> String {
+        if (!JSONSerialization.isValidJSONObject(dictionary)) {
+            print("无法解析出JSONString")
+            return ""
+        }
+        let data : NSData! = try? JSONSerialization.data(withJSONObject: dictionary, options: []) as NSData!
+        let JSONString = NSString(data:data as Data,encoding: String.Encoding.utf8.rawValue)
+        return JSONString! as String
+        
     }
     
     /// 获取手机验证码
