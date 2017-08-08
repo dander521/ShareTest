@@ -127,7 +127,7 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     }
     
     func responseToPersonalBtn() {
-        
+        self.navigationController?.pushViewController(PersonalViewController(), animated: true)
     }
     
     func responseToActiveBtn() {

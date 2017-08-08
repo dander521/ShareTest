@@ -17,6 +17,7 @@
 		F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11346B81ED90E9E0034ABF1 /* TailorxLeadingViewController.m */; };
 		F15A4A801EF0DCFB009628A5 /* UhomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A4A7F1EF0DCFB009628A5 /* UhomeError.swift */; };
 		F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */; };
+		F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */; };
 		F17DC9AA1ED7F62A002B0F7F /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A01ED7F62A002B0F7F /* BaiduMapAPI_Base.framework */; };
 		F17DC9AB1ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A11ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework */; };
 		F17DC9AC1ED7F62A002B0F7F /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A21ED7F62A002B0F7F /* BaiduMapAPI_Location.framework */; };
@@ -74,6 +75,7 @@
 		F11346B81ED90E9E0034ABF1 /* TailorxLeadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TailorxLeadingViewController.m; sourceTree = "<group>"; };
 		F15A4A7F1EF0DCFB009628A5 /* UhomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhomeError.swift; sourceTree = "<group>"; };
 		F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhomeFunctionTools.swift; sourceTree = "<group>"; };
+		F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		F17DC9721ED7EB83002B0F7F /* Uhome_Header_Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uhome_Header_Bridging.h; sourceTree = "<group>"; };
 		F17DC9A01ED7F62A002B0F7F /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		F17DC9A11ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
@@ -325,6 +327,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F169C0CA1F395EB600329B76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F169C0CB1F395EB600329B76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F169C0CC1F395EB600329B76 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F169C0CD1F395EB600329B76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F169C0CE1F395EB600329B76 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F16A04A71EEE7E5000064BB5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +497,11 @@
 		F17DCA061ED806B7002B0F7F /* SecondModule */ = {
 			isa = PBXGroup;
 			children = (
+				F169C0CA1F395EB600329B76 /* Controller */,
+				F169C0CB1F395EB600329B76 /* Model */,
+				F169C0CC1F395EB600329B76 /* Tools */,
+				F169C0CD1F395EB600329B76 /* View */,
+				F169C0CE1F395EB600329B76 /* ViewModel */,
 			);
 			path = SecondModule;
 			sourceTree = "<group>";
@@ -676,6 +719,7 @@
 				F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */,
 				F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */,
 				F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */,
+				F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */,
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
