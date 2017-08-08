@@ -14,13 +14,11 @@
 #import "Masonry.h"
 #import "MJExtension.h"
 #import "SDWebImageManager.h"
-#import "AFNetworking.h"
 
 #import "TXModelAchivar.h"
 #import "TXUserModel.h"
 #import "WSAuthCode.h"
 #import "TXCountDownTime.h"
-#import "LGHTTPClient.h"
 
 //MARK: - BaiduMap
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>

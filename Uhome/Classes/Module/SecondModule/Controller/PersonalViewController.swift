@@ -20,5 +20,4 @@ class PersonalViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-    
 }

@@ -1,19 +1,5 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
+  - Alamofire (4.5.0)
   - HandyJSON (1.7.2)
   - IQKeyboardManagerSwift (4.0.11)
   - Kingfisher (3.10.4)
@@ -32,7 +18,7 @@ PODS:
   - Validator (2.1.1)
 
 DEPENDENCIES:
-  - AFNetworking
+  - Alamofire
   - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -47,7 +33,7 @@ DEPENDENCIES:
   - Validator
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
@@ -62,6 +48,6 @@ SPEC CHECKSUMS:
   Then: 8496793c8fcac95482b943909b440724c7d8d82c
   Validator: b1793fbfd0046097551d0edd18e2c30792d69ef5
 
-PODFILE CHECKSUM: d7b70e58cd676a84fd0e44a01c66ca8be4c10106
+PODFILE CHECKSUM: 8f52297c00081164fb707f823a6f2b513f7cbb85
 
 COCOAPODS: 1.2.1

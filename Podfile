@@ -3,7 +3,7 @@ target ‘Uhome’ do
   platform :ios, ‘9.0’
   use_frameworks!
   pod 'SDWebImage'
-  pod 'AFNetworking'
+  pod 'Alamofire'
   pod 'Masonry'
   pod 'MBProgressHUD'
   pod 'MJExtension'
