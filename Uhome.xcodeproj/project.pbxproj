@@ -12,6 +12,7 @@
 		270FDC401ED5B68D0047D162 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FDC3F1ED5B68D0047D162 /* MainNavigationController.swift */; };
 		270FDC461ED5C15B0047D162 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270FDC451ED5C15B0047D162 /* UIColorExtension.swift */; };
 		9AC4FA5DC6DD567E73279AD1 /* Pods_Uhome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBC743EA3ACACD4F56D92FA /* Pods_Uhome.framework */; };
+		D41EBD171F3AF4780005EF9A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41EBD161F3AF4780005EF9A /* LoginModel.swift */; };
 		F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F11346B41ED90E9E0034ABF1 /* SMPageControl.m */; };
 		F11346BA1ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F11346B61ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.m */; };
 		F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11346B81ED90E9E0034ABF1 /* TailorxLeadingViewController.m */; };
@@ -65,6 +66,7 @@
 		2EBC743EA3ACACD4F56D92FA /* Pods_Uhome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uhome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAE32DB7E39B2B341742954 /* Pods-Uhome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uhome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uhome/Pods-Uhome.debug.xcconfig"; sourceTree = "<group>"; };
 		A589C9805FA661C5170E5833 /* Pods-Uhome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uhome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uhome/Pods-Uhome.release.xcconfig"; sourceTree = "<group>"; };
+		D41EBD161F3AF4780005EF9A /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		F11346B31ED90E9E0034ABF1 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		F11346B41ED90E9E0034ABF1 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		F11346B51ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TailorxLeadingCollectionViewCell.h; sourceTree = "<group>"; };
@@ -298,6 +300,14 @@
 				A589C9805FA661C5170E5833 /* Pods-Uhome.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D41EBD121F3AF4490005EF9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D41EBD161F3AF4780005EF9A /* LoginModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F11346B21ED90E9E0034ABF1 /* NewFeatures */ = {
@@ -549,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				F18FCEB01EE1508800985482 /* LoginViewController.swift */,
+				D41EBD121F3AF4490005EF9A /* Model */,
 				F18496E41F38719300867731 /* View */,
 			);
 			path = Controller;
@@ -693,6 +704,7 @@
 				270FDC461ED5C15B0047D162 /* UIColorExtension.swift in Sources */,
 				F18496E31F380E4500867731 /* TXUserModel.m in Sources */,
 				F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */,
+				D41EBD171F3AF4780005EF9A /* LoginModel.swift in Sources */,
 				F17DCA011ED8065B002B0F7F /* BaseViewController.swift in Sources */,
 				F18496E21F380E4500867731 /* TXModelAchivar.m in Sources */,
 				F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */,

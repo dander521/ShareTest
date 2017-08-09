@@ -11,7 +11,7 @@ import UIKit
 import KRProgressHUD
 import Then
 import Alamofire
-
+import HandyJSON
 
 class LoginViewController: BaseViewController {
     
@@ -81,6 +81,10 @@ class LoginViewController: BaseViewController {
             
             print(dic)
             
+
+            if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: resultString) {
+                print(model.msg ?? "msg")
+            }
             
         }
     }
