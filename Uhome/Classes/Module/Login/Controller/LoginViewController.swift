@@ -21,7 +21,6 @@ class LoginViewController: BaseViewController {
     var phoneTF: UITextField!
     var codeViewTF: UITextField!
     var codeView: WSAuthCode!
-    var refreshButton: UIButton!
     var pincodeTF: UITextField!
     var pincodeButton: UIButton!
     var loginButton: UIButton!
@@ -190,16 +189,6 @@ class LoginViewController: BaseViewController {
             $0.textAlignment = NSTextAlignment.left
         }
         
-        refreshButton = UIButton().then {
-            $0.layer.cornerRadius = 5
-            $0.layer.masksToBounds = true
-            $0.backgroundColor = UIColor.yellow
-            $0.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-            $0.setTitle("刷新", for: UIControlState.normal)
-            $0.setTitleColor(UIColor.black, for: UIControlState.normal)
-            $0.addTarget(self, action: #selector(LoginViewController.touchRefreshPincodeBtn), for: UIControlEvents.touchUpInside)
-        }
-        
         pincodeButton = UIButton().then {
             $0.layer.cornerRadius = 5
             $0.layer.masksToBounds = true
@@ -226,7 +215,6 @@ class LoginViewController: BaseViewController {
         view.addSubview(phoneTF)
         view.addSubview(pincodeTF)
         view.addSubview(codeViewTF)
-        view.addSubview(refreshButton)
         view.addSubview(pincodeButton)
         view.addSubview(loginButton)
         view.addSubview(codeView)
@@ -270,30 +258,22 @@ class LoginViewController: BaseViewController {
             make?.top.equalTo()(self.phoneTF.mas_bottom)?.setOffset(20)
             make?.left.equalTo()(self.codeViewTF.mas_right)?.setOffset(10)
             make?.height.equalTo()(44)
-            make?.right.equalTo()(self.refreshButton.mas_left)?.setOffset(-10)
+            make?.right.equalTo()(self.view)?.setOffset(-20)
             make?.width.equalTo()(100)
         }
         
-        refreshButton.mas_makeConstraints { make in
-            make?.top.equalTo()(self.phoneTF.mas_bottom)?.setOffset(20)
-            make?.left.equalTo()(self.codeView.mas_right)?.setOffset(10)
-            make?.right.equalTo()(self.view)?.setOffset(-20)
-            make?.height.equalTo()(44)
-            make?.width.equalTo()(44)
-        }
-        
         pincodeTF.mas_makeConstraints { make in
-            make?.top.equalTo()(self.refreshButton.mas_bottom)?.setOffset(20)
+            make?.top.equalTo()(self.codeView.mas_bottom)?.setOffset(20)
             make?.left.equalTo()(self.view)?.setOffset(20)
             make?.height.equalTo()(44)
         }
         
         pincodeButton.mas_makeConstraints { make in
-            make?.top.equalTo()(self.refreshButton.mas_bottom)?.setOffset(20)
+            make?.top.equalTo()(self.codeView.mas_bottom)?.setOffset(20)
             make?.left.equalTo()(self.pincodeTF.mas_right)?.setOffset(10)
             make?.right.equalTo()(self.view)?.setOffset(-20)
             make?.height.equalTo()(44)
-            make?.width.equalTo()(155)
+            make?.width.equalTo()(100)
         }
         
         loginButton.mas_makeConstraints { make in
