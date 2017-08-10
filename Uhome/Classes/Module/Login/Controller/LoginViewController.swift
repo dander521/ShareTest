@@ -64,7 +64,6 @@ class LoginViewController: BaseViewController {
         
         MBProgressHUD.showMessage("请求中...")
         UhomeNetManager.sharedInstance.postRequest(urlString: "http://www.damudichan.com/api/app/get.asmx/get_prices", params: ["house_id" : "1"], success: { (successJson) in
-            MBProgressHUD.hide()
             MBProgressHUD.showSuccess("")
 //            if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: successJson) {
 //                print(model.msg ?? "msg")
@@ -73,7 +72,6 @@ class LoginViewController: BaseViewController {
             UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
             TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
         }, failure: { (errorMsg) in
-            MBProgressHUD.hide()
             MBProgressHUD.showError(errorMsg)
         })
     }
