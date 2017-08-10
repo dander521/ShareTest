@@ -103,7 +103,7 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     func clearNavigationBarColor() {
         var textAttrs: [String : AnyObject] = Dictionary()
-        textAttrs[NSForegroundColorAttributeName] = UIColor.white
+        textAttrs[NSForegroundColorAttributeName] = UIColor.black
         textAttrs[NSFontAttributeName] = UIFont.systemFont(ofSize: 16)
         self.navigationController?.navigationBar.titleTextAttributes = textAttrs
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -131,6 +131,6 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     }
     
     func responseToActiveBtn() {
-        
+        navigationController?.pushViewController(ActivityViewController(), animated: true)
     }
 }

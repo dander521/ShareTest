@@ -56,8 +56,7 @@ class LoginViewController: BaseViewController {
     
     /// 登录
     func touchLoginBtn() {
-//        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
-//        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "0")
+
         requestLogin()
     }
     
@@ -66,14 +65,16 @@ class LoginViewController: BaseViewController {
         KRProgressHUD.show()
         UhomeNetManager.sharedInstance.postRequest(urlString: "http://www.damudichan.com/api/app/get.asmx/get_prices", params: ["house_id" : "1"], success: { (successJson) in
             KRProgressHUD.showSuccess()
-            if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: successJson) {
-                print(model.msg ?? "msg")
-            }
+//            if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: successJson) {
+//                print(model.msg ?? "msg")
+//            }
+            
+            UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
+            TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
         }, failure: { (errorMsg) in
             KRProgressHUD.showMessage(errorMsg)
         })
     }
-    
     
     /// 获取手机验证码
     func touchPincodeBtn() {
