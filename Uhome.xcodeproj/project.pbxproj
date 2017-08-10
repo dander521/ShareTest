@@ -21,6 +21,10 @@
 		F15A4A801EF0DCFB009628A5 /* UhomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A4A7F1EF0DCFB009628A5 /* UhomeError.swift */; };
 		F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */; };
 		F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */; };
+		F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F16AA2B01F3C00500050B7DD /* MBProgressHUD+Add.m */; };
+		F16AA2B71F3C00500050B7DD /* MBProgressHUD+CMKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F16AA2B11F3C00500050B7DD /* MBProgressHUD+CMKit.bundle */; };
+		F16AA2B81F3C00500050B7DD /* MBProgressHUD+CMKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F16AA2B31F3C00500050B7DD /* MBProgressHUD+CMKit.m */; };
+		F16AA2B91F3C00500050B7DD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F16AA2B51F3C00500050B7DD /* MBProgressHUD.m */; };
 		F17DC9AA1ED7F62A002B0F7F /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A01ED7F62A002B0F7F /* BaiduMapAPI_Base.framework */; };
 		F17DC9AB1ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A11ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework */; };
 		F17DC9AC1ED7F62A002B0F7F /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DC9A21ED7F62A002B0F7F /* BaiduMapAPI_Location.framework */; };
@@ -80,6 +84,13 @@
 		F15A4A7F1EF0DCFB009628A5 /* UhomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhomeError.swift; sourceTree = "<group>"; };
 		F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhomeFunctionTools.swift; sourceTree = "<group>"; };
 		F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		F16AA2AF1F3C00500050B7DD /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		F16AA2B01F3C00500050B7DD /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		F16AA2B11F3C00500050B7DD /* MBProgressHUD+CMKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+CMKit.bundle"; sourceTree = "<group>"; };
+		F16AA2B21F3C00500050B7DD /* MBProgressHUD+CMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CMKit.h"; sourceTree = "<group>"; };
+		F16AA2B31F3C00500050B7DD /* MBProgressHUD+CMKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CMKit.m"; sourceTree = "<group>"; };
+		F16AA2B41F3C00500050B7DD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F16AA2B51F3C00500050B7DD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		F17DC9721ED7EB83002B0F7F /* Uhome_Header_Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uhome_Header_Bridging.h; sourceTree = "<group>"; };
 		F17DC9A01ED7F62A002B0F7F /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		F17DC9A11ED7F62A002B0F7F /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
@@ -388,6 +399,20 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F16AA2AE1F3C00500050B7DD /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F16AA2AF1F3C00500050B7DD /* MBProgressHUD+Add.h */,
+				F16AA2B01F3C00500050B7DD /* MBProgressHUD+Add.m */,
+				F16AA2B11F3C00500050B7DD /* MBProgressHUD+CMKit.bundle */,
+				F16AA2B21F3C00500050B7DD /* MBProgressHUD+CMKit.h */,
+				F16AA2B31F3C00500050B7DD /* MBProgressHUD+CMKit.m */,
+				F16AA2B41F3C00500050B7DD /* MBProgressHUD.h */,
+				F16AA2B51F3C00500050B7DD /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		F17DC96E1ED7E7EC002B0F7F /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +425,7 @@
 		F17DC99E1ED7F60D002B0F7F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				F16AA2AE1F3C00500050B7DD /* MBProgressHUD */,
 				F11346B21ED90E9E0034ABF1 /* NewFeatures */,
 				F17DC9E11ED80138002B0F7F /* QRCode */,
 				F17DC99F1ED7F62A002B0F7F /* BaiduMapAPI */,
@@ -647,6 +673,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16AA2B71F3C00500050B7DD /* MBProgressHUD+CMKit.bundle in Resources */,
 				F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */,
 				F17DC9EE1ED802EA002B0F7F /* qr_album.png in Resources */,
 				F17DC9EF1ED802EA002B0F7F /* qr_back.png in Resources */,
@@ -713,6 +740,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16AA2B81F3C00500050B7DD /* MBProgressHUD+CMKit.m in Sources */,
 				270FDC401ED5B68D0047D162 /* MainNavigationController.swift in Sources */,
 				F15A4A801EF0DCFB009628A5 /* UhomeError.swift in Sources */,
 				270FDC461ED5C15B0047D162 /* UIColorExtension.swift in Sources */,
@@ -729,11 +757,13 @@
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
+				F16AA2B91F3C00500050B7DD /* MBProgressHUD.m in Sources */,
 				F18496E91F38738E00867731 /* WSAuthCode.m in Sources */,
 				F17DC9E61ED80138002B0F7F /* YTFScanToolController.m in Sources */,
 				F11346BA1ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.m in Sources */,
 				F17DCA161ED82373002B0F7F /* BMPViewController.swift in Sources */,
 				D41EBD191F3BED450005EF9A /* UhomeNetManager.swift in Sources */,
+				F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */,
 				D41EBD1C1F3BF8DD0005EF9A /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@
 #define Uhome_Header_Bridging_h
 
 //MARK: - CocoaPods
-#import "MBProgressHUD.h"
+
 #import "Masonry.h"
 #import "MJExtension.h"
 #import "SDWebImageManager.h"
@@ -19,6 +19,8 @@
 #import "TXUserModel.h"
 #import "WSAuthCode.h"
 #import "TXCountDownTime.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+CMKit.h"
 
 //MARK: - BaiduMap
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>

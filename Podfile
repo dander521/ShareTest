@@ -5,7 +5,6 @@ target ‘Uhome’ do
   pod 'SDWebImage'
   pod 'Alamofire'
   pod 'Masonry'
-  pod 'MBProgressHUD'
   pod 'MJExtension'
   pod 'IQKeyboardManagerSwift'
   pod 'ObjectMapper'

@@ -9,7 +9,6 @@
 #ifndef UhomePrefixHeader_pch
 #define UhomePrefixHeader_pch
 
-#import "MBProgressHUD.h"
 #import "Masonry.h"
 #import "MJExtension.h"
 #import "SDWebImageManager.h"
@@ -18,5 +17,7 @@
 #import "TXUserModel.h"
 #import "WSAuthCode.h"
 #import "TXCountDownTime.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+CMKit.h"
 
 #endif /* UhomePrefixHeader_pch */
