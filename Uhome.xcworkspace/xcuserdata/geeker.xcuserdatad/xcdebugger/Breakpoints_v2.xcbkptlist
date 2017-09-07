@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526458266.53397"
+            timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "touchPincodeBtn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526444747.92602"
+            timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "requestLogin()"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526444750.097394"
+            timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "requestLogin()"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526458266.53397"
+            timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "touchPincodeBtn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,12 +116,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526457507.855495"
+            timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "requestLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Uhome/Classes/Module/FirstModule/Controller/BMPViewController.swift"
+            timestampString = "526461779.650483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getProject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
+            timestampString = "526459211.835346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "postRequest(urlString:params:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Uhome.UhomeNetManager.postRequest (urlString : Swift.String, params : Swift.Dictionary&lt;Swift.String, Any&gt;, success : (Swift.String) -&gt; (), failure : (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Uhome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
+                  timestampString = "526461853.006904"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Uhome.UhomeNetManager.(postRequest (urlString : Swift.String, params : Swift.Dictionary&lt;Swift.String, Any&gt;, success : (Swift.String) -&gt; (), failure : (Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Uhome"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
+                  timestampString = "526461853.008267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Uhome/Classes/Module/FirstModule/Controller/BMPViewController.swift"
+            timestampString = "526461779.650483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getProject()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

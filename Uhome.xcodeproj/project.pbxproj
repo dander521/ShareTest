@@ -63,6 +63,8 @@
 		F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18496F41F38986F00867731 /* CustomBottomView.swift */; };
 		F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18496F61F38987A00867731 /* CustomBottomView.xib */; };
 		F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FCEB01EE1508800985482 /* LoginViewController.swift */; };
+		F1FF8E6E1F611F62007F8085 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */; };
+		F1FF8E781F612B6A007F8085 /* ProjectHousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,8 @@
 		F18496F41F38986F00867731 /* CustomBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomView.swift; sourceTree = "<group>"; };
 		F18496F61F38987A00867731 /* CustomBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBottomView.xib; sourceTree = "<group>"; };
 		F18FCEB01EE1508800985482 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHousesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +494,7 @@
 				F17DCA021ED806B7002B0F7F /* FirstModule */,
 				F17DCA061ED806B7002B0F7F /* SecondModule */,
 				F17DCA0A1ED806B7002B0F7F /* ThirdModule */,
+				F1FF8E6F1F61290D007F8085 /* ProjectHouses */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 		F17DCA041ED806B7002B0F7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,6 +610,38 @@
 				F18496E41F38719300867731 /* View */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1FF8E6F1F61290D007F8085 /* ProjectHouses */ = {
+			isa = PBXGroup;
+			children = (
+				F1FF8E701F61290D007F8085 /* Controller */,
+				F1FF8E711F61290D007F8085 /* Model */,
+				F1FF8E721F61290D007F8085 /* View */,
+			);
+			path = ProjectHouses;
+			sourceTree = "<group>";
+		};
+		F1FF8E701F61290D007F8085 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1FF8E711F61290D007F8085 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1FF8E721F61290D007F8085 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,6 +798,7 @@
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
+				F1FF8E781F612B6A007F8085 /* ProjectHousesViewController.swift in Sources */,
 				F16AA2B91F3C00500050B7DD /* MBProgressHUD.m in Sources */,
 				F18496E91F38738E00867731 /* WSAuthCode.m in Sources */,
 				F17DC9E61ED80138002B0F7F /* YTFScanToolController.m in Sources */,
@@ -769,6 +808,7 @@
 				D41EBD191F3BED450005EF9A /* UhomeNetManager.swift in Sources */,
 				F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */,
 				D41EBD1C1F3BF8DD0005EF9A /* ActivityViewController.swift in Sources */,
+				F1FF8E6E1F611F62007F8085 /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

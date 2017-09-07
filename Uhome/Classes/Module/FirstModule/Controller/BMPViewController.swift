@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import HandyJSON
 
 class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServiceDelegate, CustomBottomViewDelegate {
     
     var locationService: BMKLocationService!
     var mapView: BMKMapView!
-    
-    var lon: Double = 0.0
-    var lat: Double = 0.0
+    var projectArray: [ProjectModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +35,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         mapView.showsUserLocation = false
         mapView.userTrackingMode = BMKUserTrackingModeFollow
         mapView.showsUserLocation = true
+        
+        getProject()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,33 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func getProject() {
+        MBProgressHUD.showMessage("请求中...")
+        UhomeNetManager.sharedInstance.postRequest(urlString: getCityProject, params: ["id" : TXUserModel.defaultUser().userId, "lon" : "104.064095", "lat" : "30.551882", "key" : "房", "price_from" : "0", "price_end" : "10000"], success: { (successJson) in
+            MBProgressHUD.hide()
+            /*
+             {
+             code = 0;
+             data =     {
+             status = 0;
+             values = "";
+             };
+             msg = "\U83b7\U53d6\U5c0f\U533a\U4fe1\U606f";
+             succcess = true;
+             }
+             */
+            if let array = [ProjectModel].deserialize(from: successJson, designatedPath: "data.values") {
+                self.projectArray = array as? [ProjectModel]
+                print("array = \(array)")
+            } else {
+                print("解析失败")
+            }
+            
+        }, failure: { (errorMsg) in
+            MBProgressHUD.hide()
+        })
     }
     
     //MARK: - Custom Method
@@ -93,8 +121,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
      */
     func didUpdate(_ userLocation: BMKUserLocation!) {
         
-        self.lon = userLocation.location.coordinate.longitude
-        self.lat = userLocation.location.coordinate.latitude
+        TXModelAchivar.updateUserModel(withKey: "longitude", value: NSString(format: "%f" , userLocation.location.coordinate.longitude) as String! as String!)
+        TXModelAchivar.updateUserModel(withKey: "latitude", value: NSString(format: "%f" , userLocation.location.coordinate.latitude) as String! as String!)
         
         print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
         mapView.updateLocationData(userLocation)
@@ -131,6 +159,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     func responseToQrcodeBtn() {
         print("responseToQrcodeBtn")
+        let vwcHouse = ProjectHousesViewController()
+        self.navigationController?.pushViewController(vwcHouse, animated: true)
     }
     
     func responseToNextBtn() {

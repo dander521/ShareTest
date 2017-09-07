@@ -18,7 +18,7 @@ let getKey = "http://www.damudichan.com/api/app/get.asmx/get_key"
 let getHousePrice = "http://www.damudichan.com/api/app/get.asmx/get_prices"
 
 /// id lon lat key price_from price_end
-let getProject = "http://www.damudichan.com/api/app/get.asmx/get_project"
+let getCityProject = "http://www.damudichan.com/api/app/get.asmx/get_project"
 
 /// mobile code
 let loginByCode = "http://www.damudichan.com/api/app/get.asmx/login_by_code"
