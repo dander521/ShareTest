@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HouseDetailViewController: UIViewController {
+class HouseDetailViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
 
     open var houseId: String?
     override func viewDidLoad() {
@@ -16,6 +16,12 @@ class HouseDetailViewController: UIViewController {
 
         self.navigationItem.title = "青南美湾2-1-1506"
         self.view.backgroundColor = UIColor.white
+        
+        let calendar = FSCalendar.init(frame: CGRect(x: 0, y: 80, width: UIScreen.main.bounds.size.width, height: 340))
+        calendar.dataSource = self
+        calendar.delegate = self
+        calendar.backgroundColor = UIColor.white;
+        view.addSubview(calendar)
     }
 
     override func didReceiveMemoryWarning() {

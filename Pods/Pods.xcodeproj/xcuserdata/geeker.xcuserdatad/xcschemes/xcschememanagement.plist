@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FSCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HandyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,7 +82,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16DBE43E9D2598E96D55E0672509648D</key>
+		<key>20D07E467FA5D70A6DF27CC842F8189D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>580FE61CDA319E4F8F582A67013894A3</key>
+		<key>4861D87F39AE07BC67596446755ED733</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5AA17C95E926B760FD08E0B487DAEFA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>851AA01FD45C9EE72F726755A746BE3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B56B625E851336836FA3DC346752C276</key>
+		<key>9D3116BDFD9F2C239A75B598580A5537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1E33A32CFB2297878E4FF75A91F93CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,17 +132,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C5A2DB7A84B7B78E359870D2E1B24AA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D03F0D92E038AB45D963C5ED8A55A4FA</key>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D52144DE9D7255DE912490FF5A806573</key>
+		<key>DA1DD63E02EAFE495D78B09A98A1DDAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,6 +14,7 @@ target ‘Uhome’ do
   pod 'SwiftDate'
   pod 'Kingfisher'
   pod 'HandyJSON'
+  pod 'FSCalendar'
 end
 
 post_install do |installer|

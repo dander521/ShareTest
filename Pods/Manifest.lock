@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - FSCalendar (2.7.9)
   - HandyJSON (1.7.2)
   - IQKeyboardManagerSwift (4.0.11)
   - Kingfisher (3.10.4)
@@ -18,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FSCalendar
   - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -32,6 +34,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
@@ -45,6 +48,6 @@ SPEC CHECKSUMS:
   Then: 8496793c8fcac95482b943909b440724c7d8d82c
   Validator: b1793fbfd0046097551d0edd18e2c30792d69ef5
 
-PODFILE CHECKSUM: dd20a851604e81f5e0d3adab1fc66706acbc91f9
+PODFILE CHECKSUM: 980830c9f932aa0ac722e36bcbbcbbe2678e032c
 
 COCOAPODS: 1.2.1
