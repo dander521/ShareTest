@@ -32,17 +32,19 @@ extension UhomeNetManager {
             let dic = UhomeFunctionTools.getDictionaryFromJSONString(jsonString: resultString)
             
             print("Get Json >>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n \(dic)")
+            if dic.count > 0 {
+                let succcess = dic["succcess"] as! String
+                let errorMsg = dic["msg"] as! String
                 
-            let succcess = dic["succcess"] as! String
-            let errorMsg = dic["msg"] as! String
-            
-            if succcess == "true" {
-                success(resultString)
+                if succcess == "true" {
+                    success(resultString)
+                } else {
+                    failure(errorMsg)
+                }
             } else {
-                failure(errorMsg)
+                print(">>>>>>>>>>>>>服务器数据异常>>>>>>>>>>>>>>>>")
             }
         }
-        
     }
     //MARK: - POST 请求
     func postRequest(urlString : String, params : [String : Any], success : @escaping (_ response : String)->(), failure : @escaping (_ error : String)->()) {
