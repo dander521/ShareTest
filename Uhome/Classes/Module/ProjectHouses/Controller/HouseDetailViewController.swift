@@ -20,6 +20,11 @@ class HouseDetailViewController: UIViewController, FSCalendarDelegate, FSCalenda
         let calendar = FSCalendar.init(frame: CGRect(x: 0, y: 80, width: UIScreen.main.bounds.size.width, height: 340))
         calendar.dataSource = self
         calendar.delegate = self
+        
+        calendar.appearance.selectionColor = UIColor.blue
+        calendar.appearance.todaySelectionColor = UIColor.blue
+        calendar.placeholderType = FSCalendarPlaceholderType.fillHeadTail
+        
         calendar.backgroundColor = UIColor.white;
         view.addSubview(calendar)
     }
@@ -28,5 +33,22 @@ class HouseDetailViewController: UIViewController, FSCalendarDelegate, FSCalenda
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //MARK: - FSCalendarDelegate
+    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+        return "刚";
+    }
+    
+    
+    
+    //MARK: - FSCalendarDataSource
+    func minimumDate(for calendar: FSCalendar) -> Date {
+        let date = NSDate()
+        return date as Date
+    }
+    
+    func maximumDate(for calendar: FSCalendar) -> Date {
+        let date = NSDate(timeIntervalSinceNow: 90*24*60*60)
+        return date as Date
+    }
 }
