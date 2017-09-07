@@ -59,33 +59,33 @@ class LoginViewController: BaseViewController {
     /// 登录
     func touchLoginBtn() {
 
-//        requestLogin()
-        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
-        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
+        requestLogin()
+//        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
+//        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
     }
     
     func requestLogin() {
         
-        if self.phoneTF.text == nil || Validate.phoneNum(self.phoneTF.text!).isRight == false {
-            MBProgressHUD.showMessage("请输入正确手机号码")
-            return
-        }
-        
-        if self.phoneCode == nil {
-            MBProgressHUD.showMessage("请输入正确验证码")
-            return
-        }
+//        if self.phoneTF.text == nil || Validate.phoneNum(self.phoneTF.text!).isRight == false {
+//            MBProgressHUD.showMessage("请输入正确手机号码")
+//            return
+//        }
+//        
+//        if self.phoneCode == nil {
+//            MBProgressHUD.showMessage("请输入正确验证码")
+//            return
+//        }
         
         MBProgressHUD.showMessage("请求中...")
         UhomeNetManager.sharedInstance.postRequest(urlString: loginByCode, params: ["mobile" : self.phoneTF.text!, "code" : self.phoneCode!], success: { (successJson) in
-            MBProgressHUD.showSuccess("")
+            MBProgressHUD.hide()
             if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: successJson) {
                 print(model.msg ?? "msg")
             }
             UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
             TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
         }, failure: { (errorMsg) in
-            MBProgressHUD.showError(errorMsg)
+                MBProgressHUD.hide()
         })
     }
     
@@ -93,18 +93,22 @@ class LoginViewController: BaseViewController {
     func touchPincodeBtn() {
         TXCountDownTime.shared().start(withTime: 60, title: "获取验证码", countDownTitle: "重新获取", mainColor: UIColor.yellow, count: UIColor.lightGray, atBtn: self.pincodeButton)
         
-        if self.phoneTF.text != nil && Validate.phoneNum(self.phoneTF.text!).isRight {
+//        if self.phoneTF.text != nil && Validate.phoneNum(self.phoneTF.text!).isRight {
             MBProgressHUD.showMessage("请求中...")
             UhomeNetManager.sharedInstance.postRequest(urlString: loginGetCode, params: ["mobile" : self.phoneTF.text!], success: { (successJson) in
-                MBProgressHUD.showSuccess("")
+                MBProgressHUD.hide()
                 // FIXME: 处理手机验证码返回
                 // self.phoneCode = ?
+                    if let model = JSONDeserializer<LoginCodeModel>.deserializeFrom(json: successJson) {
+                        print(model.msg ?? "msg")
+                        self.phoneCode = model.data["code"] as? String
+                    }
                 }, failure: { (errorMsg) in
-                MBProgressHUD.showError(errorMsg)
+                    MBProgressHUD.hide()
             })
-        } else {
-            MBProgressHUD.showMessage("请输入正确的手机号码")
-        }
+//        } else {
+//            MBProgressHUD.showMessage("请输入正确的手机号码")
+//        }
     }
     
     /// 刷新图形验证码

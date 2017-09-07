@@ -59,14 +59,17 @@ extension UhomeNetManager {
             let dic = UhomeFunctionTools.getDictionaryFromJSONString(jsonString: resultString)
             
             print("Post Json >>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n \(dic)")
-            
-            let succcess = dic["succcess"] as! String
-            let errorMsg = dic["msg"] as! String
-            
-            if succcess == "true" {
-                success(resultString)
+            if dic.count == 0 {
+                print(">>>>>>>>>>>>服务器数据错误>>>>>>>>>>>>>>>>>")
             } else {
-                failure(errorMsg)
+                let succcess = dic["succcess"] as! String
+                let errorMsg = dic["msg"] as! String
+                
+                if succcess == "true" {
+                    success(resultString)
+                } else {
+                    failure(errorMsg)
+                }
             }
         }
     }

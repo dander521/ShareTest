@@ -22,6 +22,7 @@
 		F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */; };
 		F163A07A1F60D7E100040639 /* NetworkConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163A0791F60D7E100040639 /* NetworkConst.swift */; };
 		F163A0831F60E01200040639 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163A0821F60E01200040639 /* Validation.swift */; };
+		F163A0851F6116EF00040639 /* LoginCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163A0841F6116EF00040639 /* LoginCodeModel.swift */; };
 		F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */; };
 		F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F16AA2B01F3C00500050B7DD /* MBProgressHUD+Add.m */; };
 		F16AA2B71F3C00500050B7DD /* MBProgressHUD+CMKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F16AA2B11F3C00500050B7DD /* MBProgressHUD+CMKit.bundle */; };
@@ -87,6 +88,7 @@
 		F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhomeFunctionTools.swift; sourceTree = "<group>"; };
 		F163A0791F60D7E100040639 /* NetworkConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConst.swift; sourceTree = "<group>"; };
 		F163A0821F60E01200040639 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		F163A0841F6116EF00040639 /* LoginCodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCodeModel.swift; sourceTree = "<group>"; };
 		F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		F16AA2AF1F3C00500050B7DD /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		F16AA2B01F3C00500050B7DD /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				D41EBD161F3AF4780005EF9A /* LoginModel.swift */,
+				F163A0841F6116EF00040639 /* LoginCodeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				F17DC9E61ED80138002B0F7F /* YTFScanToolController.m in Sources */,
 				F11346BA1ED90E9E0034ABF1 /* TailorxLeadingCollectionViewCell.m in Sources */,
 				F17DCA161ED82373002B0F7F /* BMPViewController.swift in Sources */,
+				F163A0851F6116EF00040639 /* LoginCodeModel.swift in Sources */,
 				D41EBD191F3BED450005EF9A /* UhomeNetManager.swift in Sources */,
 				F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */,
 				D41EBD1C1F3BF8DD0005EF9A /* ActivityViewController.swift in Sources */,

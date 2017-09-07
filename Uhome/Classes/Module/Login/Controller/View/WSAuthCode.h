@@ -32,7 +32,7 @@ typedef enum  {
 @property(nonatomic,assign)AllWordArraytypes allWordArraytype;
 
 //验证码字符串
-@property(nonatomic,strong)NSString *authCodeString;
+@property(nonatomic,strong) NSString *authCodeString;
 
 
 
