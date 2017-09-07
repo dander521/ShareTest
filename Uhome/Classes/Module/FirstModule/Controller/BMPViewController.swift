@@ -160,6 +160,7 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     func responseToQrcodeBtn() {
         print("responseToQrcodeBtn")
         let vwcHouse = ProjectHousesViewController()
+        vwcHouse.projectId = String.init(format: "%d", 2)
         self.navigationController?.pushViewController(vwcHouse, animated: true)
     }
     

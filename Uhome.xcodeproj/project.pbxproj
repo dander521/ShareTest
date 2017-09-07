@@ -65,6 +65,9 @@
 		F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FCEB01EE1508800985482 /* LoginViewController.swift */; };
 		F1FF8E6E1F611F62007F8085 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */; };
 		F1FF8E781F612B6A007F8085 /* ProjectHousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */; };
+		F1FF8E7B1F612DD0007F8085 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E791F612DD0007F8085 /* HouseTableViewCell.swift */; };
+		F1FF8E7C1F612DD0007F8085 /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FF8E7A1F612DD0007F8085 /* HouseTableViewCell.xib */; };
+		F1FF8E7E1F6130DD007F8085 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E7D1F6130DD007F8085 /* HouseDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +147,9 @@
 		F18FCEB01EE1508800985482 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHousesViewController.swift; sourceTree = "<group>"; };
+		F1FF8E791F612DD0007F8085 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
+		F1FF8E7A1F612DD0007F8085 /* HouseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
+		F1FF8E7D1F6130DD007F8085 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,6 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */,
+				F1FF8E7D1F6130DD007F8085 /* HouseDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -640,6 +647,8 @@
 		F1FF8E721F61290D007F8085 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1FF8E791F612DD0007F8085 /* HouseTableViewCell.swift */,
+				F1FF8E7A1F612DD0007F8085 /* HouseTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -718,6 +727,7 @@
 				F17DC9EF1ED802EA002B0F7F /* qr_back.png in Resources */,
 				F17DC9F21ED802EA002B0F7F /* qr_line.png in Resources */,
 				270FDBF01ED5A3D90047D162 /* Assets.xcassets in Resources */,
+				F1FF8E7C1F612DD0007F8085 /* HouseTableViewCell.xib in Resources */,
 				F17DC9F01ED802EA002B0F7F /* qr_light_off.png in Resources */,
 				F17DC9F11ED802EA002B0F7F /* qr_light_on.png in Resources */,
 				F17DCA1A1ED83073002B0F7F /* mapapi.bundle in Resources */,
@@ -795,10 +805,12 @@
 				F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */,
 				F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */,
 				F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */,
+				F1FF8E7E1F6130DD007F8085 /* HouseDetailViewController.swift in Sources */,
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
 				F1FF8E781F612B6A007F8085 /* ProjectHousesViewController.swift in Sources */,
+				F1FF8E7B1F612DD0007F8085 /* HouseTableViewCell.swift in Sources */,
 				F16AA2B91F3C00500050B7DD /* MBProgressHUD.m in Sources */,
 				F18496E91F38738E00867731 /* WSAuthCode.m in Sources */,
 				F17DC9E61ED80138002B0F7F /* YTFScanToolController.m in Sources */,
