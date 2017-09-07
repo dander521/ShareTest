@@ -60,8 +60,6 @@ class LoginViewController: BaseViewController {
     func touchLoginBtn() {
 
         requestLogin()
-//        UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
-//        TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")
     }
     
     func requestLogin() {
@@ -81,6 +79,10 @@ class LoginViewController: BaseViewController {
             MBProgressHUD.hide()
             if let model = JSONDeserializer<LoginModel>.deserializeFrom(json: successJson) {
                 print(model.msg ?? "msg")
+                TXModelAchivar.updateUserModel(withKey: "userId", value: model.data["id"] as! String)
+                TXModelAchivar.updateUserModel(withKey: "mobile", value: model.data["mobile"] as! String)
+                TXModelAchivar.updateUserModel(withKey: "point", value: model.data["point"] as! String)
+                TXModelAchivar.updateUserModel(withKey: "user_name", value: model.data["user_name"] as! String)
             }
             UIApplication.shared.keyWindow?.rootViewController = MainNavigationController.init(rootViewController: BMPViewController())
             TXModelAchivar.updateUserModel(withKey: "isLogin", value: "1")

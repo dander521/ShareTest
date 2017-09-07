@@ -20,8 +20,6 @@
         model = [TXModelAchivar unachiveUserModel];
         if (!model) {
             model = [[TXUserModel alloc]init];
-            model.isShowLeading = true;
-            model.unreadMsgCount = 0;
             // 默认定位为成都市
             model.longitude = @"104.064095";
             model.latitude = @"30.551882";
@@ -45,41 +43,14 @@ MJCodingImplementation
     
 }
 
-- (void)setUnreadMsgCount:(NSInteger)unreadMsgCount {
-    _unreadMsgCount = unreadMsgCount;
-}
 
 /**
  * 清楚用户数据
  */
 - (void)resetModelData {
-    self.hxLoginStatus = false;
     self.isLogin = @"0";
-    self.st = @"UTOUU-ST-INVALID";
-    self.tgt = nil;
-    self.password = nil;
-    self.udid = nil;
-    self.deviceToken = nil;
-    self.password = nil;
-    self.account = nil;
-    
-    self.address = nil;
-    self.genderText = nil;
-    self.nickName = nil;
-    self.phone = nil;
-    self.photo = nil;
-    self.userId = 0;
-    self.height = 0;
-    self.weight = 0;
-    self.mobileBindDate = 0;
-    self.unreadMsgCount = 0;
-    
-    self.hasBodyData = false;
-    self.hasFinishCustomerInfo = false;
-    self.payBind = false;
-    self.weixinBind = false;
-    self.qqBind = false;
-    self.realAuth = false;
+    self.mobile = nil;
+    self.userId = nil;
 }
 
 /**

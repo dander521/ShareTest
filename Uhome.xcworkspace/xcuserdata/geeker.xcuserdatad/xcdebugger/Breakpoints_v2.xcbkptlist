@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526444742.447198"
+            timestampString = "526458266.53397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "touchPincodeBtn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,45 +84,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-            timestampString = "526455724.9547"
+            timestampString = "526458266.53397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "touchPincodeBtn()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Uhome.LoginViewController.(touchPincodeBtn () -&gt; ()).(closure #1)"
-                  moduleName = "Uhome"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-                  timestampString = "526456453.57959"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Uhome.LoginViewController.(touchPincodeBtn () -&gt; ()).(closure #2)"
-                  moduleName = "Uhome"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
-                  timestampString = "526456453.580928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,6 +106,22 @@
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "postRequest(urlString:params:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
+            timestampString = "526457507.855495"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "requestLogin()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
