@@ -18,3 +18,4 @@ class LoginCodeModel: HandyJSON {
     
     required init() {}
 }
+ 

@@ -68,6 +68,14 @@
 		F1FF8E7B1F612DD0007F8085 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E791F612DD0007F8085 /* HouseTableViewCell.swift */; };
 		F1FF8E7C1F612DD0007F8085 /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FF8E7A1F612DD0007F8085 /* HouseTableViewCell.xib */; };
 		F1FF8E7E1F6130DD007F8085 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E7D1F6130DD007F8085 /* HouseDetailViewController.swift */; };
+		F1FF8E811F6135DC007F8085 /* PersonalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E7F1F6135DC007F8085 /* PersonalTableViewCell.swift */; };
+		F1FF8E821F6135DC007F8085 /* PersonalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FF8E801F6135DC007F8085 /* PersonalTableViewCell.xib */; };
+		F1FF8E841F613908007F8085 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E831F613908007F8085 /* MyOrderViewController.swift */; };
+		F1FF8E861F613916007F8085 /* MyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E851F613916007F8085 /* MyMessageViewController.swift */; };
+		F1FF8E881F613920007F8085 /* MyHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E871F613920007F8085 /* MyHouseViewController.swift */; };
+		F1FF8E8A1F61392D007F8085 /* CommonQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E891F61392D007F8085 /* CommonQuestionViewController.swift */; };
+		F1FF8E8C1F6139BB007F8085 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E8B1F6139BB007F8085 /* OrderDetailViewController.swift */; };
+		F1FF8E8E1F6139E4007F8085 /* PayOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E8D1F6139E4007F8085 /* PayOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +158,14 @@
 		F1FF8E791F612DD0007F8085 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
 		F1FF8E7A1F612DD0007F8085 /* HouseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
 		F1FF8E7D1F6130DD007F8085 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
+		F1FF8E7F1F6135DC007F8085 /* PersonalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTableViewCell.swift; sourceTree = "<group>"; };
+		F1FF8E801F6135DC007F8085 /* PersonalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalTableViewCell.xib; sourceTree = "<group>"; };
+		F1FF8E831F613908007F8085 /* MyOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
+		F1FF8E851F613916007F8085 /* MyMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMessageViewController.swift; sourceTree = "<group>"; };
+		F1FF8E871F613920007F8085 /* MyHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHouseViewController.swift; sourceTree = "<group>"; };
+		F1FF8E891F61392D007F8085 /* CommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionViewController.swift; sourceTree = "<group>"; };
+		F1FF8E8B1F6139BB007F8085 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		F1FF8E8D1F6139E4007F8085 /* PayOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +384,12 @@
 			isa = PBXGroup;
 			children = (
 				F169C0CF1F395EDB00329B76 /* PersonalViewController.swift */,
+				F1FF8E831F613908007F8085 /* MyOrderViewController.swift */,
+				F1FF8E851F613916007F8085 /* MyMessageViewController.swift */,
+				F1FF8E871F613920007F8085 /* MyHouseViewController.swift */,
+				F1FF8E891F61392D007F8085 /* CommonQuestionViewController.swift */,
+				F1FF8E8B1F6139BB007F8085 /* OrderDetailViewController.swift */,
+				F1FF8E8D1F6139E4007F8085 /* PayOrderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,6 +411,8 @@
 		F169C0CD1F395EB600329B76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1FF8E7F1F6135DC007F8085 /* PersonalTableViewCell.swift */,
+				F1FF8E801F6135DC007F8085 /* PersonalTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,6 +748,7 @@
 				F16AA2B71F3C00500050B7DD /* MBProgressHUD+CMKit.bundle in Resources */,
 				F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */,
 				F17DC9EE1ED802EA002B0F7F /* qr_album.png in Resources */,
+				F1FF8E821F6135DC007F8085 /* PersonalTableViewCell.xib in Resources */,
 				F17DC9EF1ED802EA002B0F7F /* qr_back.png in Resources */,
 				F17DC9F21ED802EA002B0F7F /* qr_line.png in Resources */,
 				270FDBF01ED5A3D90047D162 /* Assets.xcassets in Resources */,
@@ -795,17 +820,24 @@
 				270FDC461ED5C15B0047D162 /* UIColorExtension.swift in Sources */,
 				F163A0831F60E01200040639 /* Validation.swift in Sources */,
 				F163A07A1F60D7E100040639 /* NetworkConst.swift in Sources */,
+				F1FF8E811F6135DC007F8085 /* PersonalTableViewCell.swift in Sources */,
 				F18496E31F380E4500867731 /* TXUserModel.m in Sources */,
 				F15FAC601EEE80930072717C /* UhomeFunctionTools.swift in Sources */,
+				F1FF8E841F613908007F8085 /* MyOrderViewController.swift in Sources */,
 				D41EBD171F3AF4780005EF9A /* LoginModel.swift in Sources */,
+				F1FF8E8A1F61392D007F8085 /* CommonQuestionViewController.swift in Sources */,
+				F1FF8E8C1F6139BB007F8085 /* OrderDetailViewController.swift in Sources */,
 				F17DCA011ED8065B002B0F7F /* BaseViewController.swift in Sources */,
 				F18496E21F380E4500867731 /* TXModelAchivar.m in Sources */,
+				F1FF8E861F613916007F8085 /* MyMessageViewController.swift in Sources */,
 				F11346BB1ED90E9E0034ABF1 /* TailorxLeadingViewController.m in Sources */,
+				F1FF8E881F613920007F8085 /* MyHouseViewController.swift in Sources */,
 				F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */,
 				F18496EC1F38912A00867731 /* TXCountDownTime.m in Sources */,
 				F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */,
 				F169C0D01F395EDB00329B76 /* PersonalViewController.swift in Sources */,
 				F1FF8E7E1F6130DD007F8085 /* HouseDetailViewController.swift in Sources */,
+				F1FF8E8E1F6139E4007F8085 /* PayOrderViewController.swift in Sources */,
 				F11346B91ED90E9E0034ABF1 /* SMPageControl.m in Sources */,
 				270FDC3B1ED5AC580047D162 /* AppDelegate.swift in Sources */,
 				F17DC9E71ED80138002B0F7F /* YTFScanView.m in Sources */,
