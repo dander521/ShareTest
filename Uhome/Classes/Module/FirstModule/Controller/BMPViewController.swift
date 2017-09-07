@@ -32,9 +32,9 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         locationService.allowsBackgroundLocationUpdates = true
         
         locationService.startUserLocationService()
-        mapView.showsUserLocation = false
         mapView.userTrackingMode = BMKUserTrackingModeFollow
         mapView.showsUserLocation = true
+        mapView.zoomLevel = 20;
         
         getProject()
     }
