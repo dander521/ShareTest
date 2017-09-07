@@ -62,7 +62,14 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     func getProject() {
         MBProgressHUD.showMessage("请求中...")
-        UhomeNetManager.sharedInstance.postRequest(urlString: getCityProject, params: ["id" : TXUserModel.defaultUser().userId, "lon" : "104.064095", "lat" : "30.551882", "key" : "房", "price_from" : "0", "price_end" : "10000"], success: { (successJson) in
+        let params = NSMutableDictionary()
+        params.setValue(TXUserModel.defaultUser().userId, forKey: "id")
+        params.setValue("104.064095", forKey: "lon")
+        params.setValue("30.551882", forKey: "lat")
+        params.setValue("key", forKey: "key")
+        params.setValue("0", forKey: "price_from")
+        params.setValue("10000", forKey: "price_end")
+        UhomeNetManager.sharedInstance.postRequest(urlString: getCityProject, params: params as! [String : Any], success: { (successJson) in
             MBProgressHUD.hide()
             /*
              {
