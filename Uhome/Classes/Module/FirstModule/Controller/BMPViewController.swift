@@ -12,6 +12,9 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     var locationService: BMKLocationService!
     var mapView: BMKMapView!
+    
+    var lon: Double = 0.0
+    var lat: Double = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +92,10 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
      *@param userLocation 新的用户位置
      */
     func didUpdate(_ userLocation: BMKUserLocation!) {
+        
+        self.lon = userLocation.location.coordinate.longitude
+        self.lat = userLocation.location.coordinate.latitude
+        
         print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
         mapView.updateLocationData(userLocation)
     }
@@ -119,18 +126,28 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     }
     
     func responseToLocationBtn() {
-        
+        print("responseToLocationBtn")
     }
     
     func responseToQrcodeBtn() {
-        
+        print("responseToQrcodeBtn")
+    }
+    
+    func responseToNextBtn() {
+        print("responseToNextBtn")
     }
     
     func responseToPersonalBtn() {
-        self.navigationController?.pushViewController(PersonalViewController(), animated: true)
+        
+        if TXUserModel().userLoginStatus() == false {
+            self.navigationController?.pushViewController(LoginViewController(), animated: true)
+        } else {
+            self.navigationController?.pushViewController(PersonalViewController(), animated: true)
+        }
     }
     
     func responseToActiveBtn() {
         navigationController?.pushViewController(ActivityViewController(), animated: true)
     }
+    
 }

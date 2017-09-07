@@ -14,6 +14,7 @@ public protocol CustomBottomViewDelegate {
     func responseToQrcodeBtn()
     func responseToPersonalBtn()
     func responseToActiveBtn()
+    func responseToNextBtn()
 }
 
 class CustomBottomView: UIView {
@@ -26,6 +27,7 @@ class CustomBottomView: UIView {
     @IBOutlet weak var qrcodeBtn: UIButton!
     @IBOutlet weak var personalBtn: UIButton!
     @IBOutlet weak var activeBtn: UIButton!
+    @IBOutlet weak var nextHouseBtn: UIButton!
     
     class func newInstance() -> CustomBottomView? {
         let nibView = Bundle.main.loadNibNamed("CustomBottomView", owner: nil, options: nil);
@@ -76,4 +78,9 @@ class CustomBottomView: UIView {
     @IBAction func touchActiveBtn(_ sender: UIButton) {
         self.delegate?.responseToActiveBtn()
     }
+    
+    @IBAction func touchNextHouseBtn(_ sender: Any) {
+        self.delegate?.responseToNextBtn()
+    }
+    
 }

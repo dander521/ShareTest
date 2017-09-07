@@ -96,6 +96,19 @@
                         <action selector="touchActiveBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="5p8-UF-uDb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjt-85-e9y">
+                    <rect key="frame" x="255" y="192" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="58F-ys-yvv"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="MRH-S4-lv8"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="eMp-0f-deO"/>
+                        <constraint firstAttribute="width" constant="44" id="nRA-qd-dwx"/>
+                    </constraints>
+                    <state key="normal" image="ic_tab_home_default"/>
+                    <connections>
+                        <action selector="touchNextHouseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="2ay-zr-Yll"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -104,6 +117,7 @@
                 <constraint firstItem="d6Z-uf-zrh" firstAttribute="top" secondItem="EyL-6Y-3Uh" secondAttribute="bottom" constant="4" id="2t7-2X-ERV"/>
                 <constraint firstAttribute="bottom" secondItem="njR-bJ-hGO" secondAttribute="bottom" constant="13" id="7mi-uA-fyn"/>
                 <constraint firstAttribute="trailing" secondItem="GeO-rO-JlZ" secondAttribute="trailing" id="9dK-7Y-QaP"/>
+                <constraint firstItem="Gjt-85-e9y" firstAttribute="leading" secondItem="7GQ-hv-bsA" secondAttribute="trailing" constant="8" id="AMx-AX-p5E"/>
                 <constraint firstItem="nCO-Vw-tLu" firstAttribute="top" secondItem="uxy-VP-puz" secondAttribute="bottom" constant="27" id="BUC-eP-wha"/>
                 <constraint firstItem="uxy-VP-puz" firstAttribute="centerX" secondItem="GeO-rO-JlZ" secondAttribute="centerX" id="H2b-D1-BmQ"/>
                 <constraint firstItem="GeO-rO-JlZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MbW-td-iSM"/>
@@ -116,6 +130,7 @@
                 <constraint firstItem="uxy-VP-puz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="fyv-JF-04a"/>
                 <constraint firstItem="EyL-6Y-3Uh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="hBI-pF-vaQ"/>
                 <constraint firstAttribute="trailing" secondItem="EyL-6Y-3Uh" secondAttribute="trailing" constant="16" id="i1N-oN-tMs"/>
+                <constraint firstItem="Gjt-85-e9y" firstAttribute="centerY" secondItem="7GQ-hv-bsA" secondAttribute="centerY" id="nRv-dT-aaX"/>
                 <constraint firstAttribute="bottom" secondItem="7GQ-hv-bsA" secondAttribute="bottom" constant="36" id="njC-SL-fLu"/>
                 <constraint firstItem="7GQ-hv-bsA" firstAttribute="centerX" secondItem="GeO-rO-JlZ" secondAttribute="centerX" id="zAm-QN-rBI"/>
             </constraints>
@@ -123,12 +138,13 @@
             <connections>
                 <outlet property="activeBtn" destination="JkG-Ma-28d" id="cid-PS-Dfz"/>
                 <outlet property="locationBtn" destination="d6Z-uf-zrh" id="soA-Ib-3DB"/>
+                <outlet property="nextHouseBtn" destination="Gjt-85-e9y" id="Ucf-vU-gcY"/>
                 <outlet property="personalBtn" destination="njR-bJ-hGO" id="Rts-lC-RXh"/>
                 <outlet property="qrcodeBtn" destination="7GQ-hv-bsA" id="2Cl-xn-N51"/>
                 <outlet property="questionBtn" destination="EyL-6Y-3Uh" id="pA2-Ec-VyF"/>
                 <outlet property="showOrHideBtn" destination="uxy-VP-puz" id="dt6-2z-Fz0"/>
             </connections>
-            <point key="canvasLocation" x="118" y="150"/>
+            <point key="canvasLocation" x="-33" y="147"/>
         </view>
     </objects>
     <resources>
