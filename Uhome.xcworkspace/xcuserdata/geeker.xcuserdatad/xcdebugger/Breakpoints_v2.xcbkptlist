@@ -148,7 +148,7 @@
                   moduleName = "Uhome"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-                  timestampString = "526466018.791803"
+                  timestampString = "526538241.531208"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -163,7 +163,7 @@
                   moduleName = "Uhome"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-                  timestampString = "526466018.793259"
+                  timestampString = "526538241.532557"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -171,6 +171,22 @@
                   offsetFromSymbolStart = "196">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Uhome/Classes/Module/FirstModule/Controller/BMPViewController.swift"
+            timestampString = "526538076.832406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getProject()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

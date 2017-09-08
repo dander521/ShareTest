@@ -63,10 +63,10 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     func getProject() {
         MBProgressHUD.showMessage("请求中...")
         let params = NSMutableDictionary()
-        params.setValue(TXUserModel.defaultUser().userId, forKey: "id")
-        params.setValue("104.064095", forKey: "lon")
-        params.setValue("30.551882", forKey: "lat")
-        params.setValue("key", forKey: "key")
+        params.setValue("104", forKey: "id")
+        params.setValue("109.662644", forKey: "lon")
+        params.setValue("18.243032", forKey: "lat")
+        params.setValue("半岛", forKey: "key")
         params.setValue("0", forKey: "price_from")
         params.setValue("10000", forKey: "price_end")
         UhomeNetManager.sharedInstance.postRequest(urlString: getCityProject, params: params as! [String : Any], success: { (successJson) in
@@ -82,9 +82,9 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
              succcess = true;
              }
              */
-            if let array = [ProjectModel].deserialize(from: successJson, designatedPath: "data.values") {
+            if let array = [ProjectModel].deserialize(from: successJson, designatedPath: "data") {
                 self.projectArray = array as? [ProjectModel]
-                print("array = \(array)")
+                print("self.projectArray?.count = \(String(describing: self.projectArray?.count))")
             } else {
                 print("解析失败")
             }

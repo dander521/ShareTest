@@ -11,10 +11,13 @@ import HandyJSON
 
 class ProjectModel: HandyJSON {
     
-    var msg: String?
-    var code: Int?
-    var success: Bool?
-    var data: Dictionary<String, Any> = [:]
+    var area: String?
+    var id: String?
+    var img_url: String?
+    var lon_lat: String?
+    var peitao: String?
+    var title: String?
+    var zhaiyao: String?
     
     required init() {}
 }
