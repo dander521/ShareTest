@@ -15,12 +15,14 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     var mapView: BMKMapView!
     var customBottomView: CustomBottomView?
     var point: BMKPointAnnotation?
+    var currentModel: ProjectModel?
     
     var projectArray: [ProjectModel]? {
         didSet {
             if (projectArray?.count)! > 0 {
                 
                 let model:ProjectModel = projectArray![0]
+                currentModel = model
                 let array = model.lon_lat?.components(separatedBy: ",")
                 
                 point = BMKPointAnnotation()
@@ -148,8 +150,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
      */
     func didUpdate(_ userLocation: BMKUserLocation!) {
         
-        TXModelAchivar.updateUserModel(withKey: "longitude", value: NSString(format: "%f" , userLocation.location.coordinate.longitude) as String! as String!)
-        TXModelAchivar.updateUserModel(withKey: "latitude", value: NSString(format: "%f" , userLocation.location.coordinate.latitude) as String! as String!)
+//        TXModelAchivar.updateUserModel(withKey: "longitude", value: NSString(format: "%f" , userLocation.location.coordinate.longitude) as String! as String!)
+//        TXModelAchivar.updateUserModel(withKey: "latitude", value: NSString(format: "%f" , userLocation.location.coordinate.latitude) as String! as String!)
         
         print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
         mapView.updateLocationData(userLocation)
@@ -186,8 +188,10 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     func responseToQrcodeBtn(model :ProjectModel) {
         print("responseToQrcodeBtn")
+        currentModel = model
         let vwcHouse = ProjectHousesViewController()
-        vwcHouse.projectId = model.id
+//        vwcHouse.projectId = currentModel?.id
+        vwcHouse.projectId = "107"
         self.navigationController?.pushViewController(vwcHouse, animated: true)
     }
     

@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HouseTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var houseImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var giftImageView: UIImageView!
+    @IBOutlet weak var customerImpressionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    open var model:HouseModel? {
+        didSet {
+            self.houseImageView.sd_setImage(with: URL(string: hostAddress + (model?.img_url)!), placeholderImage: UIImage.init(named: "ic_tab_home_default"), options: .retryFailed, completed: { (image, error, cacheType, imageURL) in
+                
+            })
+            self.nameLabel.text = model?.title
+            self.conditionLabel.text = model?.mianji
+            self.customerImpressionLabel.text = model?.huxing
+            self.priceLabel.text = model?.rent
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

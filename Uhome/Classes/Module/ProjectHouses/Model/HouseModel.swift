@@ -11,13 +11,15 @@ import HandyJSON
 
 class HouseModel: HandyJSON {
     
-    var area: String?
+    var huxing: String?
     var id: String?
     var img_url: String?
-    var lon_lat: String?
-    var peitao: String?
+    var mianji: String?
+    var project: String?
+    var rent: String?
+    var sort_id: String?
+    var tese: String?
     var title: String?
-    var zhaiyao: String?
     
     required init() {}
 }

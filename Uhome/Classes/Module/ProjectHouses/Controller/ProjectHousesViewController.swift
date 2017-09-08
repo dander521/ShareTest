@@ -20,11 +20,8 @@ class ProjectHousesViewController: UIViewController, UITableViewDataSource, UITa
 
         self.navigationItem.title = "青南美湾"
         self.view.backgroundColor = UIColor.white
-        
-        //初始化数据源
-        for i in 0...99{
-            dataArr.add("这是第\(i)行")
-        }
+        self.houseArray = Array()
+
         //定义表视图
         let rect:CGRect=self.view.bounds//取得self.view的大小
         tableView=UITableView(frame: rect,style: .plain)
@@ -43,10 +40,23 @@ class ProjectHousesViewController: UIViewController, UITableViewDataSource, UITa
         params.setValue(projectId, forKey: "project_id")
         UhomeNetManager.sharedInstance.postRequest(urlString: getHouses, params: params as! [String : Any], success: { (successJson) in
             MBProgressHUD.hide()
-
+            /*
+             {
+             huxing = "";
+             id = 108;
+             "img_url" = "/upload/201709/07/201709072037139726.jpg";
+             mianji = "80.00";
+             project = 107;
+             rent = "0.00";
+             "sort_id" = 99;
+             tese = "";
+             title = "2\U680b201";
+             }
+             */
             if let array = [HouseModel].deserialize(from: successJson, designatedPath: "data") {
                 self.houseArray = array as? [HouseModel]
                 print("self.projectArray?.count = \(String(describing: self.houseArray?.count))")
+                self.tableView?.reloadData()
             } else {
                 print("解析失败")
             }
@@ -63,22 +73,26 @@ class ProjectHousesViewController: UIViewController, UITableViewDataSource, UITa
     
     //实现dataSource协议 多行
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return dataArr.count
+        return houseArray!.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = HouseTableViewCell.cellWithTableView(tableView: tableView)
-        let s = dataArr.object(at: indexPath.row) as! String
-        cell.textLabel?.text=s
+        let model = self.houseArray?[indexPath.row]
+        cell.model = model
         return cell
     }
     
     //实现Delegate协议 点击事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print("\(indexPath)行被点击了")
-        
+        let model = self.houseArray?[indexPath.row]
         let vwcHouse = HouseDetailViewController()
-        vwcHouse.houseId = String.init(format: "%d", indexPath.row)
+        vwcHouse.houseId = model?.id
         navigationController?.pushViewController(vwcHouse, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120.0
     }
 }
