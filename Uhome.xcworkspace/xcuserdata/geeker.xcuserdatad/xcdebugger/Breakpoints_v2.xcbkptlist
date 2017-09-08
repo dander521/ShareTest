@@ -115,14 +115,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Uhome/Classes/Module/ProjectHouses/Controller/ProjectHousesViewController.swift"
-            timestampString = "526542842.840964"
+            filePath = "Uhome/Classes/Module/FirstModule/Controller/BMPViewController.swift"
+            timestampString = "526544768.960612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "getCustomHouses()"
-            landmarkType = "7">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "projectArray"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

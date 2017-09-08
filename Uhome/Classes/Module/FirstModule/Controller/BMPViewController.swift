@@ -13,8 +13,26 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     
     var locationService: BMKLocationService!
     var mapView: BMKMapView!
-    var projectArray: [ProjectModel]?
-    var customBottomView:CustomBottomView?
+    var customBottomView: CustomBottomView?
+    var point: BMKPointAnnotation?
+    
+    var projectArray: [ProjectModel]? {
+        didSet {
+            if (projectArray?.count)! > 0 {
+                
+                let model:ProjectModel = projectArray![0]
+                let array = model.lon_lat?.components(separatedBy: ",")
+                
+                point = BMKPointAnnotation()
+//                point?.coordinate = CLLocationCoordinate2DMake(BaseTypeConvertClass.StringToDouble(str: (array?.last)!), BaseTypeConvertClass.StringToDouble(str: (array?.first)!))
+                point?.coordinate = CLLocationCoordinate2DMake(30.551882, 104.064095)
+                point?.title = model.title;
+                point?.subtitle = model.area;
+                mapView.addAnnotation(point)
+                mapView.selectAnnotation(point, animated: true)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,9 +191,21 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         self.navigationController?.pushViewController(vwcHouse, animated: true)
     }
     
-    func responseToNextBtn() {
+    func responseToNextBtn(model :ProjectModel) {
         print("responseToNextBtn")
+        
+        mapView.removeAnnotation(point)
+        let array = model.lon_lat?.components(separatedBy: ",")
+        
+        point = BMKPointAnnotation()
+//        point?.coordinate = CLLocationCoordinate2DMake(BaseTypeConvertClass.StringToDouble(str: (array?.last)!), BaseTypeConvertClass.StringToDouble(str: (array?.first)!))
+        point?.coordinate = CLLocationCoordinate2DMake(30.551882, 104.064095)
+        point?.title = model.title;
+        point?.subtitle = model.area;
+        mapView.addAnnotation(point)
+        mapView.selectAnnotation(point, animated: true)
     }
+
     
     func responseToPersonalBtn() {
         

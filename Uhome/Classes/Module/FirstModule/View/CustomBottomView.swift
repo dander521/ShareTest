@@ -14,7 +14,7 @@ protocol CustomBottomViewDelegate {
     func responseToQrcodeBtn(model: ProjectModel)
     func responseToPersonalBtn()
     func responseToActiveBtn()
-    func responseToNextBtn()
+    func responseToNextBtn(model: ProjectModel)
 }
 
 class CustomBottomView: UIView {
@@ -104,7 +104,7 @@ class CustomBottomView: UIView {
     }
     
     @IBAction func touchNextHouseBtn(_ sender: Any) {
-        self.delegate?.responseToNextBtn()
+        self.delegate?.responseToNextBtn(model: currentModel!)
         
         selectedCount += 1;
         if selectedCount == projectCount + 1 {

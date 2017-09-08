@@ -63,6 +63,7 @@
 		F18496F51F38986F00867731 /* CustomBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18496F41F38986F00867731 /* CustomBottomView.swift */; };
 		F18496F71F38987A00867731 /* CustomBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18496F61F38987A00867731 /* CustomBottomView.xib */; };
 		F1868B421F6266E3001E9CD7 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1868B411F6266E3001E9CD7 /* HouseModel.swift */; };
+		F1868B441F626E94001E9CD7 /* BaseTypeConvertClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1868B431F626E94001E9CD7 /* BaseTypeConvertClass.swift */; };
 		F18FCEB11EE1508800985482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FCEB01EE1508800985482 /* LoginViewController.swift */; };
 		F1FF8E6E1F611F62007F8085 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */; };
 		F1FF8E781F612B6A007F8085 /* ProjectHousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */; };
@@ -154,6 +155,7 @@
 		F18496F41F38986F00867731 /* CustomBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomView.swift; sourceTree = "<group>"; };
 		F18496F61F38987A00867731 /* CustomBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBottomView.xib; sourceTree = "<group>"; };
 		F1868B411F6266E3001E9CD7 /* HouseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		F1868B431F626E94001E9CD7 /* BaseTypeConvertClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTypeConvertClass.swift; sourceTree = "<group>"; };
 		F18FCEB01EE1508800985482 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1FF8E6D1F611F62007F8085 /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		F1FF8E771F612B6A007F8085 /* ProjectHousesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHousesViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				F163A0821F60E01200040639 /* Validation.swift */,
 				F15FAC5F1EEE80930072717C /* UhomeFunctionTools.swift */,
 				F15A4A7F1EF0DCFB009628A5 /* UhomeError.swift */,
+				F1868B431F626E94001E9CD7 /* BaseTypeConvertClass.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				D41EBD191F3BED450005EF9A /* UhomeNetManager.swift in Sources */,
 				F16AA2B61F3C00500050B7DD /* MBProgressHUD+Add.m in Sources */,
 				D41EBD1C1F3BF8DD0005EF9A /* ActivityViewController.swift in Sources */,
+				F1868B441F626E94001E9CD7 /* BaseTypeConvertClass.swift in Sources */,
 				F1FF8E6E1F611F62007F8085 /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
