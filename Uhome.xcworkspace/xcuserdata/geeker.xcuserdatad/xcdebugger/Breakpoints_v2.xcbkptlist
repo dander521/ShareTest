@@ -99,22 +99,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-            timestampString = "526455972.514702"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "postRequest(urlString:params:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Uhome/Classes/Module/Login/Controller/LoginViewController.swift"
             timestampString = "526459173.210332"
             startingColumnNumber = "9223372036854775807"
@@ -131,61 +115,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-            timestampString = "526459211.835346"
+            filePath = "Uhome/Classes/Module/ProjectHouses/Controller/ProjectHousesViewController.swift"
+            timestampString = "526542842.840964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "postRequest(urlString:params:success:failure:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Uhome.UhomeNetManager.postRequest (urlString : Swift.String, params : Swift.Dictionary&lt;Swift.String, Any&gt;, success : (Swift.String) -&gt; (), failure : (Swift.String) -&gt; ()) -&gt; ()"
-                  moduleName = "Uhome"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-                  timestampString = "526538241.531208"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Uhome.UhomeNetManager.(postRequest (urlString : Swift.String, params : Swift.Dictionary&lt;Swift.String, Any&gt;, success : (Swift.String) -&gt; (), failure : (Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Uhome"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/geeker/Documents/Personal/ShareTest/Uhome/Classes/Module/Login/Controller/Model/UhomeNetManager.swift"
-                  timestampString = "526538241.532557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Uhome/Classes/Module/FirstModule/Controller/BMPViewController.swift"
-            timestampString = "526538076.832406"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "getProject()"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getCustomHouses()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,7 +14,8 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
     var locationService: BMKLocationService!
     var mapView: BMKMapView!
     var projectArray: [ProjectModel]?
-
+    var customBottomView:CustomBottomView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 配置控制器
@@ -23,10 +24,9 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         mapView = BMKMapView.init(frame: view.frame)
         view.addSubview(mapView)
         
-        if let customBottomView = CustomBottomView.newInstance() {
-            customBottomView.delegate = self
-            view.addSubview(customBottomView)
-        }
+        customBottomView = CustomBottomView.newInstance()
+        customBottomView?.delegate = self
+        view.addSubview(customBottomView!)
         
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
@@ -84,7 +84,9 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
              */
             if let array = [ProjectModel].deserialize(from: successJson, designatedPath: "data") {
                 self.projectArray = array as? [ProjectModel]
+                self.customBottomView?.projectModelArray = self.projectArray
                 print("self.projectArray?.count = \(String(describing: self.projectArray?.count))")
+                
             } else {
                 print("解析失败")
             }
@@ -164,10 +166,10 @@ class BMPViewController: BaseViewController, BMKMapViewDelegate, BMKLocationServ
         print("responseToLocationBtn")
     }
     
-    func responseToQrcodeBtn() {
+    func responseToQrcodeBtn(model :ProjectModel) {
         print("responseToQrcodeBtn")
         let vwcHouse = ProjectHousesViewController()
-        vwcHouse.projectId = String.init(format: "%d", 2)
+        vwcHouse.projectId = model.id
         self.navigationController?.pushViewController(vwcHouse, animated: true)
     }
     

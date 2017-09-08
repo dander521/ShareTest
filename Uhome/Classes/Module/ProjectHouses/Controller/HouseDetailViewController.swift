@@ -27,6 +27,8 @@ class HouseDetailViewController: UIViewController, FSCalendarDelegate, FSCalenda
         
         calendar.backgroundColor = UIColor.white;
         view.addSubview(calendar)
+        
+        print("houseId is \(String(describing: houseId))")
     }
 
     override func didReceiveMemoryWarning() {

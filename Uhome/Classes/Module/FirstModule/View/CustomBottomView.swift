@@ -8,10 +8,10 @@
 
 import UIKit
 
-public protocol CustomBottomViewDelegate {
+protocol CustomBottomViewDelegate {
     func responseToQuestionBtn()
     func responseToLocationBtn()
-    func responseToQrcodeBtn()
+    func responseToQrcodeBtn(model: ProjectModel)
     func responseToPersonalBtn()
     func responseToActiveBtn()
     func responseToNextBtn()
@@ -20,6 +20,7 @@ public protocol CustomBottomViewDelegate {
 class CustomBottomView: UIView {
     
     var isShow: Bool = false
+    
     open var delegate: CustomBottomViewDelegate?
     @IBOutlet weak var questionBtn: UIButton!
     @IBOutlet weak var locationBtn: UIButton!
@@ -28,6 +29,29 @@ class CustomBottomView: UIView {
     @IBOutlet weak var personalBtn: UIButton!
     @IBOutlet weak var activeBtn: UIButton!
     @IBOutlet weak var nextHouseBtn: UIButton!
+    var projectCount: Int = 0
+    var selectedCount: Int = 0
+    var currentModel: ProjectModel?
+    
+    open var projectModelArray:Array<ProjectModel>? {
+        didSet {
+            projectCount = (projectModelArray?.count)!
+
+            if projectCount == 0 {
+                self.qrcodeBtn.setTitle("暂无", for: UIControlState.normal)
+                self.nextHouseBtn.isHidden = true
+            } else {
+                let model = projectModelArray?[0]
+                self.currentModel = model
+                self.qrcodeBtn.setTitle(model?.title, for: UIControlState.normal)
+                if projectCount == 1 {
+                    self.nextHouseBtn.isHidden = true
+                } else {
+                    self.nextHouseBtn.isHidden = false
+                }
+            }
+        }
+    }
     
     class func newInstance() -> CustomBottomView? {
         let nibView = Bundle.main.loadNibNamed("CustomBottomView", owner: nil, options: nil);
@@ -68,7 +92,7 @@ class CustomBottomView: UIView {
     }
     
     @IBAction func touchQrcodeBtn(_ sender: UIButton) {
-        self.delegate?.responseToQrcodeBtn()
+        self.delegate?.responseToQrcodeBtn(model: currentModel!)
     }
     
     @IBAction func touchPersonalBtn(_ sender: UIButton) {
@@ -81,6 +105,13 @@ class CustomBottomView: UIView {
     
     @IBAction func touchNextHouseBtn(_ sender: Any) {
         self.delegate?.responseToNextBtn()
+        
+        selectedCount += 1;
+        if selectedCount == projectCount + 1 {
+            nextHouseBtn.isHidden = true
+        } else {
+            nextHouseBtn.isHidden = false
+            currentModel = projectModelArray?[selectedCount]
+        }
     }
-    
 }

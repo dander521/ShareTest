@@ -13,6 +13,8 @@ class ProjectHousesViewController: UIViewController, UITableViewDataSource, UITa
     var tableView:UITableView?
     var dataArr = NSMutableArray()
     open var projectId: String?
+    var houseArray: [HouseModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +31,29 @@ class ProjectHousesViewController: UIViewController, UITableViewDataSource, UITa
         tableView!.dataSource=self
         tableView!.delegate=self
         self.view.addSubview(tableView!)
+        
+        print("projectId is \(String(describing: projectId))")
+        
+        getCustomHouses()
+    }
+    
+    func getCustomHouses() {
+        MBProgressHUD.showMessage("请求中...")
+        let params = NSMutableDictionary()
+        params.setValue(projectId, forKey: "project_id")
+        UhomeNetManager.sharedInstance.postRequest(urlString: getHouses, params: params as! [String : Any], success: { (successJson) in
+            MBProgressHUD.hide()
+
+            if let array = [HouseModel].deserialize(from: successJson, designatedPath: "data") {
+                self.houseArray = array as? [HouseModel]
+                print("self.projectArray?.count = \(String(describing: self.houseArray?.count))")
+            } else {
+                print("解析失败")
+            }
+            
+        }, failure: { (errorMsg) in
+            MBProgressHUD.hide()
+        })
     }
 
     override func didReceiveMemoryWarning() {

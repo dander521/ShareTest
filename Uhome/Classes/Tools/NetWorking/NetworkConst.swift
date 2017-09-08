@@ -8,8 +8,10 @@
 
 import Foundation
 
+let hostAddress = "http://www.damudichan.com"
+
 /// project_id
-let getHouse = "http://www.damudichan.com/api/app/get.asmx/get_house"
+let getHouses = "http://www.damudichan.com/api/app/get.asmx/get_house"
 
 /// user_id
 let getKey = "http://www.damudichan.com/api/app/get.asmx/get_key"
